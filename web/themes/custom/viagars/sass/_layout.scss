@@ -1,0 +1,51 @@
+.layout__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  position: fixed;
+  background: #c01176;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  box-shadow: 0 -1px 3px #666;
+  background: violet;
+
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__logo {
+      width: 20%;
+      padding: 5px;
+
+      > a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+      }
+      svg {
+        width: 100%;
+        height: 50px;
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+main {
+}
+
+.toolbar-oriented + div {
+  header {
+    position: initial;
+  }
+  main#main {
+    margin-top: 0;
+  }
+}

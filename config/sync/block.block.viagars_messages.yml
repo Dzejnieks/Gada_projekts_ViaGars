@@ -1,0 +1,22 @@
+uuid: 4f99784a-dd61-4596-bfd2-f3d76151f3f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - viagars
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: viagars_messages
+theme: viagars
+region: content
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
