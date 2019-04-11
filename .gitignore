@@ -25,3 +25,4 @@
 
 # styling ignore
 /node_modules/
+/web/themes/custom/viagars/node_modules/
