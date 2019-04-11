@@ -22,3 +22,7 @@
 
 # Ignore .env files as they are personal
 /.env
+
+# styling ignore
+/node_modules/
+/web/themes/custom/viagars/node_modules/

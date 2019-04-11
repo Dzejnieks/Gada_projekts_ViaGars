@@ -1,0 +1,11 @@
+name: viagars
+type: theme
+description: This is beutiful Via Gars theme
+core: 8.x
+base theme: classy
+libraries: 
+  - viagars/global-styling
+regions:
+  header: Header
+  content: Content
+  footer: Footer
