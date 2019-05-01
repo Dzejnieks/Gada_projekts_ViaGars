@@ -1,0 +1,18 @@
+uuid: 57ede937-17e6-44b2-bc01-033522758ca5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.gallery
+id: node.gallery.title
+field_name: title
+entity_type: node
+bundle: gallery
+label: Virsraksts
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

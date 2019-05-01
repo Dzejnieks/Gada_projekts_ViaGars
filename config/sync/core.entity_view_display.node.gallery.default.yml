@@ -1,20 +1,19 @@
-uuid: 28f975a5-ad49-4096-9899-55cc1e5efac1
+uuid: 48a1205e-1160-4dc5-98c5-c151cfa8143b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.event.body
-    - field.field.node.event.field_date
-    - field.field.node.event.field_header_image
-    - node.type.event
+    - field.field.node.gallery.body
+    - field.field.node.gallery.field_header
+    - field.field.node.gallery.field_image
+    - node.type.gallery
   module:
-    - datetime
     - image
     - text
     - user
-id: node.event.default
+id: node.gallery.default
 targetEntityType: node
-bundle: event
+bundle: gallery
 mode: default
 content:
   body:
@@ -24,17 +23,17 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_date:
-    weight: 102
+  field_header:
+    weight: 103
     label: above
     settings:
-      format_type: medium
-      timezone_override: ''
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: datetime_default
+    type: image
     region: content
-  field_header_image:
-    weight: 103
+  field_image:
+    weight: 102
     label: above
     settings:
       image_style: ''

@@ -1,0 +1,23 @@
+uuid: 0094e01d-9d3c-4b06-b2d3-f58fa5e7f0e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_active
+    - node.type.users
+id: node.users.field_active
+field_name: field_active
+entity_type: node
+bundle: users
+label: Aktīvs
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

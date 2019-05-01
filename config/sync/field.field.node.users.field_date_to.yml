@@ -1,0 +1,21 @@
+uuid: b3c3a245-8a23-4689-ba59-69bda04272fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_to
+    - node.type.users
+  module:
+    - datetime
+id: node.users.field_date_to
+field_name: field_date_to
+entity_type: node
+bundle: users
+label: 'Laiks līdz'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
