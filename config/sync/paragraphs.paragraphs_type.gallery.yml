@@ -1,0 +1,9 @@
+uuid: 21c6bf17-9106-4595-b9dc-5798dc650ffe
+langcode: en
+status: true
+dependencies: {  }
+id: gallery
+label: Galerijas
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

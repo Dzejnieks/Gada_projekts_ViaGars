@@ -1,0 +1,21 @@
+uuid: fb98553c-46b4-40c4-b741-6b17f376a461
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_er
+    - paragraphs.paragraphs_type.gallery
+id: paragraph.gallery.field_er
+field_name: field_er
+entity_type: paragraph
+bundle: gallery
+label: er
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,24 @@
+uuid: 9fbf57d4-c547-49a4-ad03-2a3d00874b25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.header_block.field_hero_image
+    - paragraphs.paragraphs_type.header_block
+  module:
+    - image
+id: paragraph.header_block.default
+targetEntityType: paragraph
+bundle: header_block
+mode: default
+content:
+  field_hero_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }
