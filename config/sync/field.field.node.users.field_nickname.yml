@@ -1,0 +1,21 @@
+uuid: beb9a249-d265-4013-bd44-4ce62637e301
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nickname
+    - node.type.users
+  module:
+    - text
+id: node.users.field_nickname
+field_name: field_nickname
+entity_type: node
+bundle: users
+label: Iesauka
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

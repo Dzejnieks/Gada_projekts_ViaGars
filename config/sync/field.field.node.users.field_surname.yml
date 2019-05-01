@@ -1,0 +1,21 @@
+uuid: 5f85ef3e-35b4-46f5-8ab6-d05a3eed5591
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_surname
+    - node.type.users
+  module:
+    - text
+id: node.users.field_surname
+field_name: field_surname
+entity_type: node
+bundle: users
+label: Uzvārds
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

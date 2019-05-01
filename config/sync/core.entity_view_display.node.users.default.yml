@@ -1,0 +1,95 @@
+uuid: 307b666d-a6ea-4cbe-a385-c8d849b8ecd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.users.body
+    - field.field.node.users.field_active
+    - field.field.node.users.field_date_from
+    - field.field.node.users.field_date_to
+    - field.field.node.users.field_name
+    - field.field.node.users.field_nickname
+    - field.field.node.users.field_profile_image
+    - field.field.node.users.field_surname
+    - node.type.users
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.users.default
+targetEntityType: node
+bundle: users
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_active:
+    weight: 106
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_date_from:
+    weight: 104
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_to:
+    weight: 105
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_name:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_nickname:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_profile_image:
+    weight: 107
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_surname:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

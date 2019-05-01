@@ -1,0 +1,21 @@
+uuid: 3748b698-5b31-4f1b-bf0c-9b57d29a0cce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_from
+    - node.type.users
+  module:
+    - datetime
+id: node.users.field_date_from
+field_name: field_date_from
+entity_type: node
+bundle: users
+label: 'Laiks no'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
