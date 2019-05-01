@@ -1,17 +1,18 @@
-uuid: d5ced505-a238-4a37-b7d1-c3a409640752
+uuid: b646d2d5-822a-4130-9afb-4b285757c9e0
 langcode: en
 status: true
 dependencies:
   module:
-    - node
     - paragraphs
-id: paragraph.field_gallery_view
-field_name: field_gallery_view
+    - views
+    - viewsreference
+id: paragraph.field_view
+field_name: field_view
 entity_type: paragraph
-type: entity_reference
+type: viewsreference
 settings:
-  target_type: node
-module: core
+  target_type: view
+module: viewsreference
 locked: false
 cardinality: 1
 translatable: true

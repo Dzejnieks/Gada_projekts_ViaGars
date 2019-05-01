@@ -1,0 +1,23 @@
+uuid: a4933384-62ca-433b-86e6-c8f324a36fac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button
+    - paragraphs.paragraphs_type.reference_view
+  module:
+    - link
+id: paragraph.reference_view.field_button
+field_name: field_button
+entity_type: paragraph
+bundle: reference_view
+label: Poga
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

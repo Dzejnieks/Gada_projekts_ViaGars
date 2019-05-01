@@ -5,8 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_liftup
     - node.type.landing_page
-    - paragraphs.paragraphs_type.gallery
     - paragraphs.paragraphs_type.header_block
+    - paragraphs.paragraphs_type.reference_view
   module:
     - entity_reference_revisions
 id: node.landing_page.field_liftup
@@ -25,12 +25,12 @@ settings:
     negate: 0
     target_bundles:
       header_block: header_block
-      gallery: gallery
+      reference_view: reference_view
     target_bundles_drag_drop:
       header_block:
         enabled: true
         weight: 2
-      gallery:
+      reference_view:
         enabled: true
         weight: 3
 field_type: entity_reference_revisions
