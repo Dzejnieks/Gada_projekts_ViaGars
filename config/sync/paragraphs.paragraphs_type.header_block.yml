@@ -1,0 +1,9 @@
+uuid: 38abaf7a-7790-4e29-b58b-61d457ab6283
+langcode: en
+status: true
+dependencies: {  }
+id: header_block
+label: 'Galvenes bloks'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,9 @@
+uuid: 75f6a6f6-91ff-4e9d-af0f-abdd356adeb5
+langcode: en
+status: true
+dependencies: {  }
+id: reference_view
+label: 'Izsaukt skatu'
+icon_uuid: null
+description: 'Var izsaukt skatu'
+behavior_plugins: {  }

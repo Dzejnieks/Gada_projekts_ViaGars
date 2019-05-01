@@ -1,0 +1,45 @@
+uuid: bb6c235c-5676-4b27-9e0f-3a23b2929f89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.reference_view.field_button
+    - field.field.paragraph.reference_view.field_title
+    - field.field.paragraph.reference_view.field_view
+    - paragraphs.paragraphs_type.reference_view
+  module:
+    - link
+    - viewsreference
+id: paragraph.reference_view.default
+targetEntityType: paragraph
+bundle: reference_view
+mode: default
+content:
+  field_button:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_view:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: '60'
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
