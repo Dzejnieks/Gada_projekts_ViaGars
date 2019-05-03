@@ -1,0 +1,21 @@
+$colors: (
+  // color palette
+  black: #000,
+  white: #fff,
+  gray: #666,
+  // defaults
+  text: white,
+  background: gray,
+  // nested map inception
+  primary: (
+    base: #1f033a,
+    light: #4e008e,
+    lighter: #602194,
+  ),
+  secondary: (
+    base: #1f033a,
+    light: lighten(#1f033a, 15%),
+    dark: darken(#1f033a, 15%),
+    trans: transparentize(#1f033a, 0.5)
+  ),
+);

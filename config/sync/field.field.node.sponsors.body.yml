@@ -1,0 +1,22 @@
+uuid: 88d3e2e9-49d3-4baa-85bc-cddacd225a59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sponsors
+  module:
+    - text
+id: node.sponsors.body
+field_name: body
+entity_type: node
+bundle: sponsors
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
