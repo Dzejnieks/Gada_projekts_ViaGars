@@ -1,0 +1,31 @@
+$t-ff--base: 'Open Sans', sans-serif;
+//fs fontsize lh line height
+$t-fs--base: 1.8rem;
+$t-lh--base: 3rem; //1.666
+
+$t-fs--s: 1.6rem;
+$t-lh--s: 2.7rem;
+
+$t-fs--xs: 1.4rem;
+$t-lh--xs: 2.3rem;
+
+$t-fs--large: 2.1rem;
+$t-lh--large: 1.65;
+
+$t-fs--h1: 3.3rem;
+$t-lh--h1: 1.45;
+$t-fs--h2: 3rem;
+$t-lh--h2: 1.5;
+$t-fs--h3: 2.7rem;
+$t-lh--h3: 1.55;
+$t-fs--h4: 2.4rem;
+$t-lh--h4: 1.6;
+$t-fs--h5: $t-fs--large;
+$t-lh--h5: $t-lh--large;
+$t-fs--h6: $t-fs--base;
+$t-lh--h6: $t-lh--base;
+
+//$t-fw--thin: 300;
+$t-fw--base: 400;
+$t-fw--bold: 600;
+$t-fw--black: 700;

@@ -1,0 +1,18 @@
+@function parseint($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  
+  @function z-index($key) {
+    @return map-get($z-index, $key);
+  }
+  
+  @function color($color-name, $color-variant: null) {
+    @if ($color-variant != null) {
+      @return map-get(map-get($colors, $color-name), $color-variant);
+    }
+  
+    @else {
+      @return map-get($colors, $color-name);
+    }
+  }
+  

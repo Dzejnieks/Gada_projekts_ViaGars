@@ -1,31 +1,25 @@
-uuid: da50bd65-ccd9-4fea-a14e-d4221eb0b713
+uuid: 33ef795c-e084-483e-a9a0-53960fc263aa
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.users.body
-    - field.field.node.users.field_active
-    - field.field.node.users.field_date_from
-    - field.field.node.users.field_date_to
-    - field.field.node.users.field_name
-    - field.field.node.users.field_nickname
-    - field.field.node.users.field_profile_image
-    - field.field.node.users.field_surname
+    - field.field.node.sponsors.body
+    - field.field.node.sponsors.field_sponsors_image
+    - field.field.node.sponsors.field_sponsors_name
     - image.style.thumbnail
-    - node.type.users
+    - node.type.sponsors
   module:
-    - datetime
     - image
     - path
     - text
-id: node.users.default
+id: node.sponsors.default
 targetEntityType: node
-bundle: users
+bundle: sponsors
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 13
+    weight: 121
     settings:
       rows: 9
       summary_rows: 3
@@ -34,64 +28,29 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_active:
     weight: 10
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
     region: content
-  field_date_from:
-    weight: 11
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_date_to:
-    weight: 12
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_name:
-    weight: 7
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_nickname:
-    weight: 9
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_profile_image:
-    weight: 14
+  field_sponsors_image:
+    weight: 123
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
-  field_surname:
-    weight: 8
+  field_sponsors_name:
+    weight: 122
     settings:
-      rows: 5
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
+    type: string_textfield
     region: content
   path:
     type: path
-    weight: 5
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -99,26 +58,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 15
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 120
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 16
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -126,7 +85,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60

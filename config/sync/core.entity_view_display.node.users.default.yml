@@ -25,12 +25,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     region: content
   field_active:
-    weight: 106
+    weight: 5
     label: above
     settings:
       format: default
@@ -40,7 +40,7 @@ content:
     type: boolean
     region: content
   field_date_from:
-    weight: 104
+    weight: 6
     label: above
     settings:
       format_type: medium
@@ -49,7 +49,7 @@ content:
     type: datetime_default
     region: content
   field_date_to:
-    weight: 105
+    weight: 7
     label: above
     settings:
       format_type: medium
@@ -58,21 +58,21 @@ content:
     type: datetime_default
     region: content
   field_name:
-    weight: 102
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_nickname:
-    weight: 108
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_profile_image:
-    weight: 107
+    weight: 1
     label: above
     settings:
       image_style: ''
@@ -81,15 +81,15 @@ content:
     type: image
     region: content
   field_surname:
-    weight: 103
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
