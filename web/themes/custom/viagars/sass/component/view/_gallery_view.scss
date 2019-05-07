@@ -1,0 +1,9 @@
+.view-gallery-view{
+    > div {
+        display:flex;
+        flex-wrap: wrap;
+        .views-field{
+            width: 33.33%;
+        }
+    }
+}

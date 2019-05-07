@@ -3,11 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.reference_view.field_background_image
     - field.field.paragraph.reference_view.field_button
     - field.field.paragraph.reference_view.field_title
     - field.field.paragraph.reference_view.field_view
     - paragraphs.paragraphs_type.reference_view
   module:
+    - image
     - link
     - viewsreference
 id: paragraph.reference_view.default
@@ -15,6 +17,14 @@ targetEntityType: paragraph
 bundle: reference_view
 mode: default
 content:
+  field_background_image:
+    weight: 3
+    label: visually_hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
   field_button:
     weight: 2
     label: hidden

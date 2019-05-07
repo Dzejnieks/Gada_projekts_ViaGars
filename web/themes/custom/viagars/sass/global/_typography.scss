@@ -1,122 +1,156 @@
 html {
-    font-size: 62.5%;
-  }
-  
-  body {
-    font-family: $t-ff--base;
-    font-size: $t-fs--base;
-    font-weight: $t-fw--base;
-    line-height: $t-lh--base;
-    letter-spacing: 0.25px;
-  }
-  
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $t-ff--base;
+  font-size: $t-fs--base;
+  font-weight: $t-fw--base;
+  line-height: $t-lh--base;
+  letter-spacing: 0.25px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: $t-lh--base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 $t-lh--base;
+  font-weight: $t-fw--base;
+}
+
+h1 {
+  font-size: 3.3rem;
+  line-height: 1.45;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 2.7rem;
+  line-height: 1.55;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.6;
+}
+
+h5 {
+  font-size: 2.1rem;
+  line-height: 1.65;
+}
+
+h6 {
+  font-weight: $t-fw--bold;
+}
+
+blockquote {
+  padding-left: 21px;
+
   p {
-    margin-top: 0;
-    margin-bottom: $t-lh--base;
+    font-size: $t-fs--large;
+    line-height: $t-lh--large;
+    font-weight: $t-fw--black;
   }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0 0 $t-lh--base;
-    font-weight: $t-fw--base;
+
+  @include media(large) {
+    padding-left: 36px;
   }
-  
-  h1 {
-    font-size: 3.3rem;
-    line-height: 1.45;
-  }
-  
-  h2 {
-    font-size: 3rem;
-    line-height: 1.5;
-  }
-  
-  h3 {
-    font-size: 2.7rem;
-    line-height: 1.55;
-  }
-  
-  h4 {
-    font-size: 2.4rem;
-    line-height: 1.6;
-  }
-  
-  h5 {
-    font-size: 2.1rem;
-    line-height: 1.65;
-  }
-  
-  h6 {
-    font-weight: $t-fw--bold;
-  }
-  
-  ul,
-  ol {
-    margin: 0 0 30px;
+
+  @include media(xlarge) {
     padding-left: 0;
   }
-  
+}
+
+ul,
+ol {
+  margin: 0 0 30px;
+  padding-left: 0;
+}
+
+table {
+  width: 100%;
+  margin: 0 0 30px;
+  word-break: keep-all;
+
+  th,
+  td {
+    border: solid 1px $c-gray--element--light;
+    padding: $l-sp--xs $l-sp--s;
+    text-align: left;
+    vertical-align: top;
+  }
+}
+
+a {
+  color: $c-purple--base;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+picture,
+figure,
+svg,
+img,
+video {
+  display: block;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+
+select {
+  background-position: top 50% right 24px;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  padding: 4px 8px;
+  padding-right: 32px;
+  appearance: none;
+}
+
+input {
+  border-radius: 0;
+}
+
+figcaption {
+  margin: 16px;
+  font-size: $t-fs--s;
+  line-height: $t-lh--s;
+}
+
+:focus {
+  outline: 2px solid color(primary, light);
+}
+
+// @TODO Move styles to form.
+button {
+  margin: 0;
+}
+
+// @TODO Move styles to partials.
+.table--responsive {
+  overflow-x: auto;
+  margin: 0 0 30px;
+
   table {
-    width: 100%;
-    margin: 0 0 30px;
-    word-break: keep-all;
-  
-    th,
-    td {
-      border: solid 1px $c-gray--element--light;
-      padding: $l-sp--xs $l-sp--s;
-      text-align: left;
-      vertical-align: top;
-    }
-  }
-  
-  a {
-    color: $c-purple--base;
-    text-decoration: none;
-  
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-  
-  picture,
-  figure,
-  svg,
-  img,
-  video {
-    display: block;
-  }
-  
-  img,
-  video {
-    width: 100%;
-    height: auto;
-  }
-  
-  input {
-    border-radius: 0;
-  }
-  
-  :focus {
-    outline: 2px solid color(primary, light);
-  }
-  
-  // @TODO Move styles to form.
-  button {
     margin: 0;
   }
-  
-  // @TODO Move styles to partials.
-  .table--responsive {
-    overflow-x: auto;
-    margin: 0 0 30px;
-  
-    table {
-      margin: 0;
-    }
-  }
+}

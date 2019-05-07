@@ -21,10 +21,21 @@ $z-index: (
 );
 
 // Spacing
+$l-sp--xl: $t-lh--base * 3;
+$l-sp--l: $t-lh--base * 2;
+$l-sp--m: $t-lh--base;
+$l-sp--s: $t-lh--base / 2;
+$l-sp--xs: $t-lh--base / 3;
+$l-sp--xxs: $t-lh--base / 6;
+
 $sp-xlg: 90px;
 $sp-lg: 60px;
 $sp-md: 30px;
 $sp-sm: 15px;
+
+// Layout
+$l-wd--n: 110rem;
+$l-hg--menu: 7.7rem;
 
 $w-container-narrow: 1200px;
 $w-container-wide: 1560px;

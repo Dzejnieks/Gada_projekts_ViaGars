@@ -1,0 +1,300 @@
+@mixin responsive-declaration($property, $valueMin, $valueMax) {
+  #{$property}: $valueMin;
+
+  @include media('small') {
+    #{$property}: calc(#{$valueMin} + ((#{$valueMax} - #{$valueMin}) / 4) * 1);
+  }
+
+  @include media('medium') {
+    #{$property}: calc(#{$valueMin} + ((#{$valueMax} - #{$valueMin}) / 4) * 2);
+  }
+
+  @include media('large') {
+    #{$property}: calc(#{$valueMin} + ((#{$valueMax} - #{$valueMin}) / 4) * 3);
+  }
+
+  @include media('xlarge') {
+    #{$property}: $valueMax;
+  }
+}
+
+@mixin media($breakpoint) {
+  @if map-has-key($bp, $breakpoint) {
+    $breakpoint-value: map-get($bp, $breakpoint);
+    $em-point: parseint($breakpoint-value) * 0.625 / 10;
+
+    @media screen and (min-width: $em-point * 16px) { @content; }
+  }
+}
+
+@mixin bp($width) {
+  @media screen and (min-width: $width) { @content; }
+}
+
+// Mixin for buttons or links styled with button style.
+@mixin button {
+  appearance: none;
+  background-color: color(primary, base);
+  border: 0;
+  box-shadow: none;
+  color: color(white);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: $t-fw--bold;
+  padding: calc(8px + 1px) 40px; // Compensate the border in text inputs
+  transition: background-color $transition-color;
+
+  &:hover {
+    background-color: color(primary, light);
+  }
+}
+
+@mixin button-color($color) {
+  background-color: $color;
+}
+
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin break-style() {
+  br {
+    content: '' !important;
+    display: block !important;
+    margin-bottom: $sp-sm / 2 !important;
+  }
+}
+
+@mixin animated-link($link-color-name: white, $link-color-variant: null, $hover-color-name: black, $hover-color-variant: null) {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: $t-fw--bold;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  text-decoration: none;
+  width: 100%;
+  padding: 5px $sp-sm 7px;
+  transition: 0.1s ease-in-out;
+  border: 1px solid transparent;
+  color: color($link-color-name, $link-color-variant);
+  fill: color($link-color-name, $link-color-variant);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    border-color: color($link-color-name, $link-color-variant);
+  }
+
+  &:active {
+    text-decoration: none;
+    background-color: color($link-color-name, $link-color-variant);
+    color: color($hover-color-name, $hover-color-variant);
+    fill: color($hover-color-name, $hover-color-variant);
+  }
+
+  svg {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    margin-right: $sp-sm;
+  }
+}
+
+@mixin objectfit-all() {
+  overflow: hidden;
+
+  .field {
+    height: 100%;
+  }
+
+  picture {
+    display: inline;
+    vertical-align: auto;
+  }
+
+  img,
+  video {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  video {
+    /* stylelint-disable */
+    font-family: 'object-fit: cover; object-position: center center;';
+    /* stylelint-enable */
+  }
+
+  // IE only
+  @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    video { height: auto; }
+  }
+}
+
+@mixin background-image($grayscale: 1, $black: 0.75, $height: 100%) {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  filter: grayscale($grayscale);
+
+  &:before {
+    background: rgba(black, $black);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $height;
+    z-index: z-index(top);
+  }
+
+  @include objectfit-all;
+}
+
+@mixin background-image-placeholder($background-color-name: gray-darkest, $background-color-variant: null, $height: 100%) {
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: $height;
+    background-color: color($background-color-name, $background-color-variant);
+  }
+}
+
+@mixin _column-helper($columns, $gutter, $outside: false) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @if $outside == false {
+    margin-right: - $gutter / 2;
+    margin-left: - $gutter / 2;
+  }
+
+  & > * {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc((100% / #{$columns}) - #{$gutter});
+    max-width: calc((100% / #{$columns}) - #{$gutter});
+    margin-right: $gutter / 2;
+    margin-left: $gutter / 2;
+    overflow: hidden;
+  }
+}
+
+@mixin layout--columns($columns: 2, $gutter: $sp-md, $outside: false) {
+  @if $columns != 0 and $columns != 1 {
+
+    /* stylelint-disable */
+    @if $gutter == 0 { $gutter: 0px; }
+    /* stylelint-enable */
+
+    @if $columns == 2 {
+      @include media(small) {
+        @include _column-helper(2, $gutter, $outside);
+      }
+    }
+
+    @if $columns == 3 {
+      @include media(small) {
+        @include _column-helper(2, $gutter, $outside);
+      }
+
+      @include media(medium) {
+        @include _column-helper(3, $gutter, $outside);
+      }
+    }
+
+    @if $columns == 4 {
+      @include media(small) {
+        @include _column-helper(2, $gutter, $outside);
+      }
+
+      //@include media(medium) {
+      //  @include _column-helper(3, $gutter, $outside);
+      //}
+
+      @include media(large) {
+        @include _column-helper(4, $gutter, $outside);
+      }
+    }
+  }
+}
+
+@mixin layout--front-page($gutter: true, $forced: false) {
+  max-width: $w-container-wide;
+  margin: 0 auto $sp-md auto;
+
+  @if $gutter == true {
+    @if $forced == false {
+      max-width: $w-container-wide + $sp-lg * 2;
+    }
+
+    @if $forced == true {
+      max-width: $w-container-wide;
+    }
+
+    padding: 0 $sp-md;
+
+    @include media(small) {
+      padding: 0 $sp-lg;
+    }
+  }
+}
+
+@mixin escape--layout-container__narrow() {
+  max-width: $w-container-narrow;
+
+  @include media(small) {
+    //border-top: solid 2px blue;
+    margin-left: - $sp-sm;
+    width: calc(100vw - #{$sp-sm} * 3);
+  }
+
+  @include media(medium) {
+    //border-top: solid 2px green;
+    margin-left: - $sp-xlg;
+    width: calc(100vw - #{$sp-sm} * 2 - #{$sp-xlg} * 2);
+  }
+}
+
+@mixin escape--layout-container__medium() {
+  @include media(small) {
+    //border-top: solid 2px blue;
+    margin-left: - $sp-sm;
+    width: calc(100vw - #{$sp-sm} * 2);
+  }
+
+  @include media(medium) {
+    //border-top: solid 2px green;
+    margin-left: - $sp-xlg;
+    width: calc(100vw - #{$sp-sm} * 0 - #{$sp-xlg} * 2);
+  }
+}
+
+@mixin escape--layout-container__wide() {
+  @include media(small) {
+    //border-top: solid 2px blue;
+    // margin-left: - $sp-sm;
+    width: calc(100vw - #{$sp-sm} * 0);
+  }
+
+  @include media(medium) {
+    //border-top: solid 2px green;
+    margin-left: - $sp-xlg;
+    width: calc(100vw - #{$sp-sm} * 0 - #{$sp-xlg} * 1);
+  }
+}

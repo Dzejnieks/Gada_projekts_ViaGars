@@ -3,22 +3,30 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.header_block.field_header_text
     - field.field.paragraph.header_block.field_hero_image
     - paragraphs.paragraphs_type.header_block
   module:
     - image
+    - text
 id: paragraph.header_block.default
 targetEntityType: paragraph
 bundle: header_block
 mode: default
 content:
+  field_header_text:
+    weight: 1
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_hero_image:
     weight: 0
-    label: above
+    label: visually_hidden
     settings:
       image_style: ''
-      image_link: ''
     third_party_settings: {  }
-    type: image
+    type: image_url
     region: content
 hidden: {  }
