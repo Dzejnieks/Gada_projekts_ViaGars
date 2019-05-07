@@ -1,23 +1,25 @@
-.layout__inner {
-  max-width: 1200px;
+.container {
+  max-width: $max-width;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 $sp-sm;
+  @include media(medium){
+    padding: 0 $sp-md;
+  }
 }
 
 .header {
   position: fixed;
-  background: #c01176;
+  background: white;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 9;
   box-shadow: 0 -1px 3px #666;
-  background: violet;
-
   .header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 0;
 
     .header__logo {
       width: 20%;
@@ -37,10 +39,7 @@
     }
   }
 }
-
-main {
-}
-
+//fix for admin toolbar
 .toolbar-oriented + div {
   header {
     position: initial;
@@ -48,4 +47,7 @@ main {
   main#main {
     margin-top: 0;
   }
+}
+div#block-viagars-branding {
+    max-width: 100px;
 }

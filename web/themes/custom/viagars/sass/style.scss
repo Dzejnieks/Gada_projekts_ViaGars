@@ -1,1 +1,15 @@
+@import "base";
+@import "global";
+
+//basis layout
 @import "layout";
+@import "component";
+
+
+// body {
+//   padding: $sp-md;
+//   @include media(medium) {
+//     padding: $sp-xlg;
+//     background: color(primary, lighter);
+//   }
+// }
