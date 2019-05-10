@@ -20,12 +20,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_date:
-    weight: 102
+    weight: 2
     label: above
     settings:
       format_type: medium
@@ -34,7 +34,7 @@ content:
     type: datetime_default
     region: content
   field_header_image:
-    weight: 103
+    weight: 0
     label: above
     settings:
       image_style: ''
@@ -43,8 +43,8 @@ content:
     type: image
     region: content
   links:
-    weight: 100
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
