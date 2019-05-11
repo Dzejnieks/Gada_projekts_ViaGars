@@ -13,10 +13,16 @@
  * - site_slogan: Slogan for site as defined in Site information settings.
  */
 #}
+
 {% block content %}
   {% if site_logo %}
     <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo">
-      <img src="themes/custom/viagars/svg/logo.svg" alt="{{ 'Home'|t }}" />
+      <img src="/themes/custom/viagars/svg/logo.svg" alt="{{ 'Home'|t }}" />
     </a>
   {% endif %}
+<button type="button" class="navbar-toggle" data-target="#navbar-items">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+</button>
 {% endblock %}
