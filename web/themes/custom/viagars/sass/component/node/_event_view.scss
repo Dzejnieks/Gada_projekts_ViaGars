@@ -1,0 +1,12 @@
+.view-event-view{
+    > div{ //view-content
+        > div{ //view-row
+            padding: 0 0 30px 0;
+            .views-field-title{
+                > span { //field-content
+                        font-size: 30px;
+                }
+            }
+        }
+    }
+}

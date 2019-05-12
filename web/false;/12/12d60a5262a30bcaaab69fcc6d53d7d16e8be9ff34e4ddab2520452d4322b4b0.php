@@ -75,7 +75,7 @@ class __TwigTemplate_880b48b7b4840737d03a2785ef66bc6f4e9a9bd99d3a7e49b1b95550fe2
     ";
         // line 52
         $this->displayBlock('content', $context, $blocks);
-        // line 58
+        // line 64
         echo "  </div>
 ";
     }
@@ -85,18 +85,24 @@ class __TwigTemplate_880b48b7b4840737d03a2785ef66bc6f4e9a9bd99d3a7e49b1b95550fe2
     {
         // line 53
         echo "      <div class=\"container\">
-    <h1>  ";
-        // line 54
+    <h1>  <div style=\"
+        position: relative;
+        text-align: center;
+        padding-top:30px;\">";
+        // line 57
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content"] ?? null), "field_title", [])), "html", null, true);
-        echo "</h1>
+        echo "</div></h1>
       ";
-        // line 55
+        // line 58
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content"] ?? null), "field_view", [])), "html", null, true);
         echo "
-    ";
-        // line 56
+    <div style=\"
+        position: relative;
+        text-align: center;\">
+          ";
+        // line 62
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content"] ?? null), "field_button", [])), "html", null, true);
-        echo "</div>
+        echo "</div></div>
     ";
     }
 
@@ -112,7 +118,7 @@ class __TwigTemplate_880b48b7b4840737d03a2785ef66bc6f4e9a9bd99d3a7e49b1b95550fe2
 
     public function getDebugInfo()
     {
-        return array (  98 => 56,  94 => 55,  90 => 54,  87 => 53,  84 => 52,  79 => 58,  77 => 52,  73 => 51,  68 => 50,  62 => 49,  60 => 46,  59 => 45,  58 => 44,  57 => 42,);
+        return array (  104 => 62,  97 => 58,  93 => 57,  87 => 53,  84 => 52,  79 => 64,  77 => 52,  73 => 51,  68 => 50,  62 => 49,  60 => 46,  59 => 45,  58 => 44,  57 => 42,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -178,9 +184,15 @@ class __TwigTemplate_880b48b7b4840737d03a2785ef66bc6f4e9a9bd99d3a7e49b1b95550fe2
   style=\"background-image: url({{content.field_background_image[0]['#markup']}})\">
     {% block content %}
       <div class=\"container\">
-    <h1>  {{ content.field_title}}</h1>
+    <h1>  <div style=\"
+        position: relative;
+        text-align: center;
+        padding-top:30px;\">{{ content.field_title}}</div></h1>
       {{ content.field_view}}
-    {{ content.field_button}}</div>
+    <div style=\"
+        position: relative;
+        text-align: center;\">
+          {{ content.field_button}}</div></div>
     {% endblock %}
   </div>
 {% endblock paragraph %}
