@@ -1,0 +1,13 @@
+.view-full-gallery-view{
+    > div{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            text-align: center;
+            >div{
+                padding: 10px 10px;
+                width: 33%;
+                height: 50%;
+        }
+    }
+}
