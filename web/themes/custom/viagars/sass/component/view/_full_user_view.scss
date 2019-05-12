@@ -1,0 +1,12 @@
+.view-full-users-view{
+    > div{
+        display: flex;
+        flex-wrap: wrap;
+        .views-row{
+            position: relative;
+            text-align: center;
+            width: 33%;
+            height: 50%;
+            }
+        }
+}

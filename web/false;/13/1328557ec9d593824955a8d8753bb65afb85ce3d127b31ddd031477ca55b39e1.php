@@ -22,9 +22,9 @@ class __TwigTemplate_5bab3d2d48b8fb93f7c25883e556c9b15b5ba21e55dd23ba94cf0174e6a
             'content' => [$this, 'block_content'],
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = ["if" => 17];
-        $filters = ["t" => 18];
-        $functions = ["path" => 18];
+        $tags = ["if" => 18];
+        $filters = ["t" => 19];
+        $functions = ["path" => 19];
 
         try {
             $this->sandbox->checkSecurity(
@@ -60,25 +60,32 @@ class __TwigTemplate_5bab3d2d48b8fb93f7c25883e556c9b15b5ba21e55dd23ba94cf0174e6a
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 16
+    // line 17
     public function block_content($context, array $blocks = [])
     {
-        // line 17
+        // line 18
         echo "  ";
         if (($context["site_logo"] ?? null)) {
-            // line 18
+            // line 19
             echo "    <a href=\"";
             echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->renderVar($this->env->getExtension('Drupal\Core\Template\TwigExtension')->getPath("<front>"));
             echo "\" title=\"";
             echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->renderVar(t("Home"));
             echo "\" rel=\"home\" class=\"site-logo\">
-      <img src=\"themes/custom/viagars/svg/logo.svg\" alt=\"";
-            // line 19
+      <img src=\"/themes/custom/viagars/svg/logo.svg\" alt=\"";
+            // line 20
             echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->renderVar(t("Home"));
             echo "\" />
     </a>
   ";
         }
+        // line 23
+        echo "<button type=\"button\" class=\"navbar-toggle\" data-target=\"#navbar-items\">
+    <span class=\"icon-bar\"></span>
+    <span class=\"icon-bar\"></span>
+    <span class=\"icon-bar\"></span>
+</button>
+";
     }
 
     public function getTemplateName()
@@ -93,7 +100,7 @@ class __TwigTemplate_5bab3d2d48b8fb93f7c25883e556c9b15b5ba21e55dd23ba94cf0174e6a
 
     public function getDebugInfo()
     {
-        return array (  77 => 19,  70 => 18,  67 => 17,  64 => 16,  54 => 1,);
+        return array (  83 => 23,  77 => 20,  70 => 19,  67 => 18,  64 => 17,  54 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -121,13 +128,18 @@ class __TwigTemplate_5bab3d2d48b8fb93f7c25883e556c9b15b5ba21e55dd23ba94cf0174e6a
  * - site_slogan: Slogan for site as defined in Site information settings.
  */
 #}
+
 {% block content %}
   {% if site_logo %}
     <a href=\"{{ path('<front>') }}\" title=\"{{ 'Home'|t }}\" rel=\"home\" class=\"site-logo\">
-      <img src=\"themes/custom/viagars/svg/logo.svg\" alt=\"{{ 'Home'|t }}\" />
+      <img src=\"/themes/custom/viagars/svg/logo.svg\" alt=\"{{ 'Home'|t }}\" />
     </a>
   {% endif %}
-{% endblock %}
-", "themes/custom/viagars/templates/block/block--viagars-branding.html.twig", "/app/web/themes/custom/viagars/templates/block/block--viagars-branding.html.twig");
+<button type=\"button\" class=\"navbar-toggle\" data-target=\"#navbar-items\">
+    <span class=\"icon-bar\"></span>
+    <span class=\"icon-bar\"></span>
+    <span class=\"icon-bar\"></span>
+</button>
+{% endblock %}", "themes/custom/viagars/templates/block/block--viagars-branding.html.twig", "/app/web/themes/custom/viagars/templates/block/block--viagars-branding.html.twig");
     }
 }

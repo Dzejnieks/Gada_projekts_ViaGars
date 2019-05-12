@@ -1,4 +1,4 @@
-uuid: e8628081-750f-48b7-80df-f564872bf5ab
+uuid: befe8de1-266c-4989-8761-f79c25784576
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ dependencies:
     - image
     - node
     - user
-id: sponsors_view
-label: 'Sponsoru skats'
+id: full_sponsors_view
+label: 'Pilnais sponsoru skats'
 module: views
 description: ''
 tag: ''
@@ -52,7 +52,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 6
+          items_per_page: 0
           offset: 0
       style:
         type: default
@@ -273,7 +273,7 @@ display:
           entity_field: type
           plugin_id: bundle
       sorts: {  }
-      title: 'Sponsoru skats'
+      title: 'sponsoru skats'
       header: {  }
       footer: {  }
       empty: {  }
