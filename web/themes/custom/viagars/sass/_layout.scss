@@ -2,11 +2,11 @@
   max-width: $max-width;
   margin: 0 auto;
   padding: 0 $sp-sm;
-  @include media(medium){
+  @include media(medium) {
     padding: 0 $sp-md;
   }
 }
-.views-element-container{
+.views-element-container {
   margin-right: auto;
   margin-left: auto;
   max-width: 960px;
@@ -14,27 +14,29 @@
 
 .header {
   position: fixed;
-  background: white;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 9;
   box-shadow: 0 -1px 3px #666;
+  background-color: rgba(255, 255, 255, 0.639);
+  transition: all 0.2s linear 0s;
   .header__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
+    @include media(small) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    padding: $sp-s-sm 0;
 
     .header__logo {
       width: 20%;
-      padding: 5px;
+      padding: $sp-s-sm;
 
       > a {
         display: flex;
         align-items: center;
         height: 100%;
-
       }
       svg {
         width: 100%;
@@ -54,6 +56,13 @@
   }
 }
 div#block-viagars-branding {
-    max-width: 100px;
+  display: flex;
+  justify-content: space-between;
+  .site-logo {
+    display: block;
+    max-width: 90px;
+  }
+  @include media(small) {
+    display: block;
+  }
 }
-

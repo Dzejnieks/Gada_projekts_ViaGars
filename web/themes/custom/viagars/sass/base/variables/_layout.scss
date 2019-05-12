@@ -2,23 +2,10 @@
 // @see /themes/custom/tre3/tre3.breakpoints.yml
 // @see https://adamwathan.me/dont-use-em-for-media-queries/
 // @type Map
-$bp: (
-  "xxsmall":       360px, //360
-  "xsmall":        540px, //180
-  "small":         900px, //360
-  "medium":        1080px, //180
-  "large":         1440px, //360
-  "xlarge":        2160px, //720
-);
+$bp: ("xxsmall": 360px, "xsmall": 540px, "small": 900px, "medium": 1080px, "large": 1440px, "xlarge": 2160px);
 
 /* Z-Index */
-$z-index: (
-  under            : -1,
-  bottom           : 1,
-  middle           : 10,
-  top              : 20,
-  topmost          : 30
-);
+$z-index: (under : -1, bottom : 1, middle : 10, top : 20, topmost : 30);
 
 // Spacing
 $l-sp--xl: $t-lh--base * 3;
@@ -32,6 +19,7 @@ $sp-xlg: 90px;
 $sp-lg: 60px;
 $sp-md: 30px;
 $sp-sm: 15px;
+$sp-s-sm: 5px;
 
 // Layout
 $l-wd--n: 110rem;
