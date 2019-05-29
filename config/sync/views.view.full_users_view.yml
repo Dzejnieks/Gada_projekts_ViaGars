@@ -10,7 +10,7 @@ dependencies:
     - node
     - user
 id: full_users_view
-label: 'Pilnais biedru saraksts'
+label: 'Pilnais biedru skats'
 module: views
 description: ''
 tag: ''
@@ -215,7 +215,7 @@ display:
           entity_field: type
           plugin_id: bundle
       sorts: {  }
-      title: 'Biedru skats'
+      title: 'Pilnais biedru skats'
       header: {  }
       footer: {  }
       empty: {  }
