@@ -1,6 +1,7 @@
-.view-event-view{
+.view-full-event-view{
     > div{ //view-content
-        > div{ //view-row
+        > div{ //views-row
+            float:left;
             .view-field-body{
                 > div{
                     font-size: 30px;
@@ -13,9 +14,10 @@
                 }
             }
             .views-field-view-node{
-                padding-bottom:10px;
+                padding-bottom:30px;
                 margin-top:-30px;
             }
         }
     }
 }
+
