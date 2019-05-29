@@ -1,0 +1,19 @@
+uuid: 8255e101-7152-42a7-9139-5c9f00843e35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_anchor
+    - paragraphs.paragraphs_type.reference_view
+id: paragraph.reference_view.field_anchor
+field_name: field_anchor
+entity_type: paragraph
+bundle: reference_view
+label: anchor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
