@@ -47,8 +47,14 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}
-  style="background-image: url({{content.field_background_image[0]['#markup']}})">
+
+  <div
+    id="{{ content.field_anchor[0]["#context"]["value"] }}"
+    {{ attributes.addClass(classes) }}
+    {% if content.field_background_image[0]['#markup'] %}
+      style="background-image: url({{content.field_background_image[0]['#markup']}})"
+    {% endif %}
+    >
     {% block content %}
       <div class="container">
     <h1>  <div style="

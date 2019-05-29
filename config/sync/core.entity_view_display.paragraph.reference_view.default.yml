@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.reference_view.field_anchor
     - field.field.paragraph.reference_view.field_background_image
     - field.field.paragraph.reference_view.field_button
     - field.field.paragraph.reference_view.field_title
@@ -17,6 +18,14 @@ targetEntityType: paragraph
 bundle: reference_view
 mode: default
 content:
+  field_anchor:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_background_image:
     weight: 3
     label: visually_hidden
