@@ -1,24 +1,22 @@
-uuid: 3c0f342e-02b1-49a9-b2d4-137108712a4c
+uuid: ce36c4ab-e7c5-4393-8df1-d491fa68fa4c
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.menu-sponsori
   module:
     - system
   theme:
     - viagars
-_core:
-  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
-id: viagars_main_menu
+id: menu_sponsori
 theme: viagars
 region: header
-weight: -1
+weight: 0
 provider: null
-plugin: 'system_menu_block:main'
+plugin: 'system_menu_block:menu-sponsori'
 settings:
-  id: 'system_menu_block:main'
-  label: 'Main navigation'
+  id: 'system_menu_block:menu-sponsori'
+  label: menu_sponsori
   provider: system
   label_display: '0'
   level: 1
@@ -26,6 +24,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /
+    pages: /sponsori
     negate: false
     context_mapping: {  }

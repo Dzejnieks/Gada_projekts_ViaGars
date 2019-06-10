@@ -1,0 +1,8 @@
+uuid: acc137b9-05a9-405e-adbd-5676a9d1ce2b
+langcode: en
+status: true
+dependencies: {  }
+id: menu-biedri
+label: menu_biedri
+description: 'menu biedri'
+locked: false
