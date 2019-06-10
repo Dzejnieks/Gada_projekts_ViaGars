@@ -11,8 +11,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* themes/custom/viagars/templates/content/node--sponsors.html.twig */
-class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e149240 extends \Twig\Template
+/* themes/custom/viagars/templates/node/node--sponsors.html.twig */
+class __TwigTemplate_366d07bbfd38c78515eb2b5a19e06662e71e41230dce9810ab7bc4e523086880 extends \Twig\Template
 {
     public function __construct(Environment $env)
     {
@@ -117,7 +117,7 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
 
     public function getTemplateName()
     {
-        return "themes/custom/viagars/templates/content/node--sponsors.html.twig";
+        return "themes/custom/viagars/templates/node/node--sponsors.html.twig";
     }
 
     public function isTraitable()
@@ -242,6 +242,6 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
   </div>
 
 </article>
-", "themes/custom/viagars/templates/content/node--sponsors.html.twig", "/app/web/themes/custom/viagars/templates/content/node--sponsors.html.twig");
+", "themes/custom/viagars/templates/node/node--sponsors.html.twig", "/app/web/themes/custom/viagars/templates/node/node--sponsors.html.twig");
     }
 }

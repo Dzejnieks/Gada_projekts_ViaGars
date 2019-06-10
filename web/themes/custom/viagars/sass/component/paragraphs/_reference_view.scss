@@ -1,0 +1,19 @@
+.field__items{
+    .field__item{
+        .paragraph--type--reference-view{
+            position: relative;
+            padding-top:30px;
+            .field--name-field-title{
+                font-size:35px;
+                padding:0px 10px 20px 10px;
+            }
+            .field--name-field-button{
+                text-align:center;
+            }
+            .field--name-field-title{
+                position: relative;
+                text-align: center;
+            }
+        }
+    }
+}

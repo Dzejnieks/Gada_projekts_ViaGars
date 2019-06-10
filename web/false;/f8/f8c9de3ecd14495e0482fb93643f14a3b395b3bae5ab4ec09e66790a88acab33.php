@@ -11,8 +11,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* themes/custom/viagars/templates/content/node--sponsors.html.twig */
-class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e149240 extends \Twig\Template
+/* themes/custom/viagars/templates/node/node.html.twig */
+class __TwigTemplate_7c20c3f98ab896b340dfda887f5839cf6b9403aed7af2d1cf2d515be2b0a7646 extends \Twig\Template
 {
     public function __construct(Environment $env)
     {
@@ -23,13 +23,13 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = ["set" => 77, "if" => 90];
+        $tags = ["set" => 77, "if" => 90, "trans" => 100];
         $filters = ["clean_class" => 79];
         $functions = ["attach_library" => 86];
 
         try {
             $this->sandbox->checkSecurity(
-                ['set', 'if'],
+                ['set', 'if', 'trans'],
                 ['clean_class'],
                 ['attach_library']
             );
@@ -93,21 +93,39 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
         echo "  ";
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title_suffix"] ?? null)), "html", null, true);
         echo "
-  <div";
+  ";
         // line 96
+        if (($context["display_submitted"] ?? null)) {
+            // line 97
+            echo "    <footer class=\"node__meta\">
+      ";
+            // line 98
+            echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["author_picture"] ?? null)), "html", null, true);
+            echo "
+      <div";
+            // line 99
+            echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["author_attributes"] ?? null), "addClass", [0 => "node__submitted"], "method")), "html", null, true);
+            echo ">
+        ";
+            // line 100
+            echo t("Submitted on @date", array("@date" => ($context["date"] ?? null), ));
+            // line 101
+            echo "        ";
+            echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["metadata"] ?? null)), "html", null, true);
+            echo "
+      </div>
+    </footer>
+  ";
+        }
+        // line 105
+        echo "
+  <div";
+        // line 106
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content_attributes"] ?? null), "addClass", [0 => "node__content"], "method")), "html", null, true);
         echo ">
     ";
-        // line 97
-        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content"] ?? null), "field_sponsors_image", [])), "html", null, true);
-        echo "
-    ";
-        // line 98
-        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content"] ?? null), "field_sponsors_name", [])), "html", null, true);
-        echo "
-    ";
-        // line 99
-        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content"] ?? null), "field_sponsors_body", [])), "html", null, true);
+        // line 107
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["content"] ?? null)), "html", null, true);
         echo "
   </div>
 
@@ -117,7 +135,7 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
 
     public function getTemplateName()
     {
-        return "themes/custom/viagars/templates/content/node--sponsors.html.twig";
+        return "themes/custom/viagars/templates/node/node.html.twig";
     }
 
     public function isTraitable()
@@ -127,7 +145,7 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
 
     public function getDebugInfo()
     {
-        return array (  110 => 99,  106 => 98,  102 => 97,  98 => 96,  93 => 95,  85 => 92,  80 => 91,  78 => 90,  74 => 89,  69 => 87,  65 => 86,  63 => 83,  62 => 82,  61 => 81,  60 => 80,  59 => 79,  58 => 77,  55 => 75,);
+        return array (  128 => 107,  124 => 106,  121 => 105,  113 => 101,  111 => 100,  107 => 99,  103 => 98,  100 => 97,  98 => 96,  93 => 95,  85 => 92,  80 => 91,  78 => 90,  74 => 89,  69 => 87,  65 => 86,  63 => 83,  62 => 82,  61 => 81,  60 => 80,  59 => 79,  58 => 77,  55 => 75,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -235,13 +253,21 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
     </h2>
   {% endif %}
   {{ title_suffix }}
+  {% if display_submitted %}
+    <footer class=\"node__meta\">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content.field_sponsors_image }}
-    {{ content.field_sponsors_name }}
-    {{ content.field_sponsors_body }}
+    {{ content }}
   </div>
 
 </article>
-", "themes/custom/viagars/templates/content/node--sponsors.html.twig", "/app/web/themes/custom/viagars/templates/content/node--sponsors.html.twig");
+", "themes/custom/viagars/templates/node/node.html.twig", "/app/web/themes/custom/viagars/templates/node/node.html.twig");
     }
 }

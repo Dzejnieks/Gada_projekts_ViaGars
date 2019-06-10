@@ -1,10 +1,6 @@
 @import "component/paragraphs/paragraph";
-@import "component/view/gallery_view";
-@import "component/node/users_view";
-@import "component/node/sponsors_view";
-@import "component/node/event_view";
+@import "component/view/view";
+@import "component/node/node";
 @import "component/main-menu/menu";
-@import "component/view/full_user_view";
-@import "component/view/full_gallery_view";
-@import "component/view/full_sponsors_view";
-@import "component/view/full_event_view";
+@import "component/menu/menu";
+@import "component/field/field";

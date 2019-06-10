@@ -11,8 +11,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* themes/custom/viagars/templates/content/node--sponsors.html.twig */
-class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e149240 extends \Twig\Template
+/* themes/custom/viagars/templates/node/node--landing-page.html.twig */
+class __TwigTemplate_6dcfeb1723cecbe78e8a5e9ced491543d87d010408d7aac4754a514b6b145805 extends \Twig\Template
 {
     public function __construct(Environment $env)
     {
@@ -23,9 +23,9 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = ["set" => 77, "if" => 90];
-        $filters = ["clean_class" => 79];
-        $functions = ["attach_library" => 86];
+        $tags = ["set" => 74, "if" => 87];
+        $filters = ["clean_class" => 76];
+        $functions = ["attach_library" => 83];
 
         try {
             $this->sandbox->checkSecurity(
@@ -51,37 +51,34 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
 
     protected function doDisplay(array $context, array $blocks = [])
     {
-        // line 75
-        echo "
-";
-        // line 77
-        $context["classes"] = [0 => "node", 1 => ("node--type-" . \Drupal\Component\Utility\Html::getClass($this->sandbox->ensureToStringAllowed($this->getAttribute(        // line 79
-($context["node"] ?? null), "bundle", [])))), 2 => (($this->getAttribute(        // line 80
-($context["node"] ?? null), "isPromoted", [], "method")) ? ("node--promoted") : ("")), 3 => (($this->getAttribute(        // line 81
-($context["node"] ?? null), "isSticky", [], "method")) ? ("node--sticky") : ("")), 4 => (( !$this->getAttribute(        // line 82
-($context["node"] ?? null), "isPublished", [], "method")) ? ("node--unpublished") : ("")), 5 => ((        // line 83
+        // line 74
+        $context["classes"] = [0 => "node", 1 => ("node--type-" . \Drupal\Component\Utility\Html::getClass($this->sandbox->ensureToStringAllowed($this->getAttribute(        // line 76
+($context["node"] ?? null), "bundle", [])))), 2 => (($this->getAttribute(        // line 77
+($context["node"] ?? null), "isPromoted", [], "method")) ? ("node--promoted") : ("")), 3 => (($this->getAttribute(        // line 78
+($context["node"] ?? null), "isSticky", [], "method")) ? ("node--sticky") : ("")), 4 => (( !$this->getAttribute(        // line 79
+($context["node"] ?? null), "isPublished", [], "method")) ? ("node--unpublished") : ("")), 5 => ((        // line 80
 ($context["view_mode"] ?? null)) ? (("node--view-mode-" . \Drupal\Component\Utility\Html::getClass($this->sandbox->ensureToStringAllowed(($context["view_mode"] ?? null))))) : (""))];
-        // line 86
+        // line 83
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->env->getExtension('Drupal\Core\Template\TwigExtension')->attachLibrary("classy/node"), "html", null, true);
         echo "
 <article";
-        // line 87
+        // line 84
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["attributes"] ?? null), "addClass", [0 => ($context["classes"] ?? null)], "method")), "html", null, true);
         echo ">
 
   ";
-        // line 89
+        // line 86
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title_prefix"] ?? null)), "html", null, true);
         echo "
   ";
-        // line 90
+        // line 87
         if ( !($context["page"] ?? null)) {
-            // line 91
+            // line 88
             echo "    <h2";
             echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title_attributes"] ?? null)), "html", null, true);
             echo ">
       <a href=\"";
-            // line 92
+            // line 89
             echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["url"] ?? null)), "html", null, true);
             echo "\" rel=\"bookmark\">";
             echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["label"] ?? null)), "html", null, true);
@@ -89,25 +86,18 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
     </h2>
   ";
         }
-        // line 95
+        // line 92
         echo "  ";
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title_suffix"] ?? null)), "html", null, true);
         echo "
+
   <div";
-        // line 96
+        // line 94
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content_attributes"] ?? null), "addClass", [0 => "node__content"], "method")), "html", null, true);
         echo ">
     ";
-        // line 97
-        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content"] ?? null), "field_sponsors_image", [])), "html", null, true);
-        echo "
-    ";
-        // line 98
-        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content"] ?? null), "field_sponsors_name", [])), "html", null, true);
-        echo "
-    ";
-        // line 99
-        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content"] ?? null), "field_sponsors_body", [])), "html", null, true);
+        // line 95
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["content"] ?? null)), "html", null, true);
         echo "
   </div>
 
@@ -117,7 +107,7 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
 
     public function getTemplateName()
     {
-        return "themes/custom/viagars/templates/content/node--sponsors.html.twig";
+        return "themes/custom/viagars/templates/node/node--landing-page.html.twig";
     }
 
     public function isTraitable()
@@ -127,7 +117,7 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
 
     public function getDebugInfo()
     {
-        return array (  110 => 99,  106 => 98,  102 => 97,  98 => 96,  93 => 95,  85 => 92,  80 => 91,  78 => 90,  74 => 89,  69 => 87,  65 => 86,  63 => 83,  62 => 82,  61 => 81,  60 => 80,  59 => 79,  58 => 77,  55 => 75,);
+        return array (  100 => 95,  96 => 94,  90 => 92,  82 => 89,  77 => 88,  75 => 87,  71 => 86,  66 => 84,  62 => 83,  60 => 80,  59 => 79,  58 => 78,  57 => 77,  56 => 76,  55 => 74,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -211,10 +201,7 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
  *   rendered twice on a page this is invalid CSS for example: two lists
  *   in different view modes.
  */
-
- Eventi/raksti
 #}
-
 {%
   set classes = [
     'node',
@@ -235,13 +222,12 @@ class __TwigTemplate_a476bf0ae81f284a08fffc8035904d6806be68f72322ec0a658313ef9e1
     </h2>
   {% endif %}
   {{ title_suffix }}
+
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content.field_sponsors_image }}
-    {{ content.field_sponsors_name }}
-    {{ content.field_sponsors_body }}
+    {{ content }}
   </div>
 
 </article>
-", "themes/custom/viagars/templates/content/node--sponsors.html.twig", "/app/web/themes/custom/viagars/templates/content/node--sponsors.html.twig");
+", "themes/custom/viagars/templates/node/node--landing-page.html.twig", "/app/web/themes/custom/viagars/templates/node/node--landing-page.html.twig");
     }
 }
