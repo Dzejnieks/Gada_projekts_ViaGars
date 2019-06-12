@@ -72,18 +72,20 @@ class __TwigTemplate_70b220eca178ec89e649db104b8c1f2a269e5c6fe28bfc8840a7e063ffc
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["page"] ?? null), "content", [])), "html", null, true);
         echo "
   </main>
-  <footer role=\"contentinfo\" class=\"container\">
+  <footer role=\"contentinfo\" class=\"footer_background\">
+    <div class=\"container views-element-container\">
     ";
-        // line 58
+        // line 59
         if ($this->getAttribute(($context["page"] ?? null), "footer", [])) {
-            // line 59
+            // line 60
             echo "      ";
             echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["page"] ?? null), "footer", [])), "html", null, true);
             echo "
     ";
         }
-        // line 61
-        echo "  </footer>
+        // line 62
+        echo "    </div>
+  </footer>
 ";
     }
 
@@ -99,7 +101,7 @@ class __TwigTemplate_70b220eca178ec89e649db104b8c1f2a269e5c6fe28bfc8840a7e063ffc
 
     public function getDebugInfo()
     {
-        return array (  86 => 61,  80 => 59,  78 => 58,  72 => 55,  69 => 54,  62 => 50,  58 => 48,  55 => 47,);
+        return array (  87 => 62,  81 => 60,  79 => 59,  72 => 55,  69 => 54,  62 => 50,  58 => 48,  55 => 47,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -168,10 +170,12 @@ class __TwigTemplate_70b220eca178ec89e649db104b8c1f2a269e5c6fe28bfc8840a7e063ffc
   <main role=\"main\" class=\"main\" id=\"main\">
     {{ page.content }}
   </main>
-  <footer role=\"contentinfo\" class=\"container\">
+  <footer role=\"contentinfo\" class=\"footer_background\">
+    <div class=\"container views-element-container\">
     {% if page.footer %}
       {{ page.footer }}
     {% endif %}
+    </div>
   </footer>
 ", "themes/custom/viagars/templates/layout/page.html.twig", "/app/web/themes/custom/viagars/templates/layout/page.html.twig");
     }
