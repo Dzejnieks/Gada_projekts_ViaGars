@@ -644,10 +644,18 @@ div#block-viagars-branding{
           opacity:1;
           transform:translateY(0px); }
 
-.field--name-field-column .field__items{
-  -ms-flex-pack:justify;
-      justify-content:space-between;
-  display:-ms-flexbox;
-  display:flex;
-  -ms-flex-wrap:wrap;
-      flex-wrap:wrap; }
+.footer__inner > div .field--name-field-column .field__label{
+  display:none; }
+
+.footer_background{
+  background-color:#707070; }
+
+.field--name-field-column{
+  color:#fff; }
+  .field--name-field-column .field__items{
+    -ms-flex-pack:justify;
+        justify-content:space-between;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap; }

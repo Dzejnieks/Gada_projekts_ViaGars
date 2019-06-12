@@ -54,8 +54,10 @@
   <main role="main" class="main" id="main">
     {{ page.content }}
   </main>
-  <footer role="contentinfo" class="container">
+  <footer role="contentinfo" class="footer_background">
+    <div class="container views-element-container">
     {% if page.footer %}
       {{ page.footer }}
     {% endif %}
+    </div>
   </footer>
