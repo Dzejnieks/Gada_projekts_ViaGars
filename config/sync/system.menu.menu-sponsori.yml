@@ -1,0 +1,8 @@
+uuid: 42b0c0b5-4c2c-4f25-aa8a-32bbfdb71e22
+langcode: en
+status: true
+dependencies: {  }
+id: menu-sponsori
+label: menu_sponsori
+description: 'menu sponsori'
+locked: false

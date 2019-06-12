@@ -1,0 +1,8 @@
+uuid: a90b0bb7-3725-4ea0-93a0-7a6149dfafe7
+langcode: en
+status: true
+dependencies: {  }
+id: menu-raksti
+label: menu_raksti
+description: 'menu raksti'
+locked: false

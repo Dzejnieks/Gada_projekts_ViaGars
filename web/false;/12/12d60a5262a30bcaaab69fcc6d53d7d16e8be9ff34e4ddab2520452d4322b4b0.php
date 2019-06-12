@@ -25,13 +25,13 @@ class __TwigTemplate_880b48b7b4840737d03a2785ef66bc6f4e9a9bd99d3a7e49b1b95550fe2
             'content' => [$this, 'block_content'],
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = ["set" => 42, "block" => 49];
+        $tags = ["set" => 42, "block" => 49, "if" => 54];
         $filters = ["clean_class" => 44];
         $functions = [];
 
         try {
             $this->sandbox->checkSecurity(
-                ['set', 'block'],
+                ['set', 'block', 'if'],
                 ['clean_class'],
                 []
             );
@@ -65,44 +65,50 @@ class __TwigTemplate_880b48b7b4840737d03a2785ef66bc6f4e9a9bd99d3a7e49b1b95550fe2
     public function block_paragraph($context, array $blocks = [])
     {
         // line 50
-        echo "  <div";
+        echo "
+  <div
+    id=\"";
+        // line 52
+        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute(($context["content"] ?? null), "field_anchor", []), 0, [], "array"), "#context", [], "array"), "value", [], "array")), "html", null, true);
+        echo "\"
+    ";
+        // line 53
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["attributes"] ?? null), "addClass", [0 => ($context["classes"] ?? null)], "method")), "html", null, true);
         echo "
-  style=\"background-image: url(";
-        // line 51
-        echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute($this->getAttribute($this->getAttribute(($context["content"] ?? null), "field_background_image", []), 0, [], "array"), "#markup", [], "array")), "html", null, true);
-        echo ")\">
     ";
-        // line 52
+        // line 54
+        if ($this->getAttribute($this->getAttribute($this->getAttribute(($context["content"] ?? null), "field_background_image", []), 0, [], "array"), "#markup", [], "array")) {
+            // line 55
+            echo "      style=\"background-image: url(";
+            echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute($this->getAttribute($this->getAttribute(($context["content"] ?? null), "field_background_image", []), 0, [], "array"), "#markup", [], "array")), "html", null, true);
+            echo ")\"
+    ";
+        }
+        // line 57
+        echo "    >
+    ";
+        // line 58
         $this->displayBlock('content', $context, $blocks);
-        // line 64
+        // line 63
         echo "  </div>
 ";
     }
 
-    // line 52
+    // line 58
     public function block_content($context, array $blocks = [])
     {
-        // line 53
-        echo "      <div class=\"container\">
-    <h1>  <div style=\"
-        position: relative;
-        text-align: center;
-        padding-top:30px;\">";
-        // line 57
+        // line 59
+        echo "    ";
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content"] ?? null), "field_title", [])), "html", null, true);
-        echo "</div></h1>
-      ";
-        // line 58
+        echo "
+    ";
+        // line 60
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content"] ?? null), "field_view", [])), "html", null, true);
         echo "
-    <div style=\"
-        position: relative;
-        text-align: center;\">
-          ";
-        // line 62
+    ";
+        // line 61
         echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute(($context["content"] ?? null), "field_button", [])), "html", null, true);
-        echo "</div></div>
+        echo "
     ";
     }
 
@@ -118,7 +124,7 @@ class __TwigTemplate_880b48b7b4840737d03a2785ef66bc6f4e9a9bd99d3a7e49b1b95550fe2
 
     public function getDebugInfo()
     {
-        return array (  104 => 62,  97 => 58,  93 => 57,  87 => 53,  84 => 52,  79 => 64,  77 => 52,  73 => 51,  68 => 50,  62 => 49,  60 => 46,  59 => 45,  58 => 44,  57 => 42,);
+        return array (  110 => 61,  106 => 60,  101 => 59,  98 => 58,  93 => 63,  91 => 58,  88 => 57,  82 => 55,  80 => 54,  76 => 53,  72 => 52,  68 => 50,  62 => 49,  60 => 46,  59 => 45,  58 => 44,  57 => 42,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -180,19 +186,18 @@ class __TwigTemplate_880b48b7b4840737d03a2785ef66bc6f4e9a9bd99d3a7e49b1b95550fe2
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}
-  style=\"background-image: url({{content.field_background_image[0]['#markup']}})\">
+
+  <div
+    id=\"{{ content.field_anchor[0][\"#context\"][\"value\"] }}\"
+    {{ attributes.addClass(classes) }}
+    {% if content.field_background_image[0]['#markup'] %}
+      style=\"background-image: url({{content.field_background_image[0]['#markup']}})\"
+    {% endif %}
+    >
     {% block content %}
-      <div class=\"container\">
-    <h1>  <div style=\"
-        position: relative;
-        text-align: center;
-        padding-top:30px;\">{{ content.field_title}}</div></h1>
-      {{ content.field_view}}
-    <div style=\"
-        position: relative;
-        text-align: center;\">
-          {{ content.field_button}}</div></div>
+    {{ content.field_title}}
+    {{ content.field_view}}
+    {{ content.field_button}}
     {% endblock %}
   </div>
 {% endblock paragraph %}

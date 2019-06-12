@@ -1,0 +1,8 @@
+uuid: 5595e5b6-ce41-4f67-8fbc-2f9d6859bb19
+langcode: en
+status: true
+dependencies: {  }
+id: menu-galerijas
+label: menu_galerijas
+description: 'menu galerijas'
+locked: false

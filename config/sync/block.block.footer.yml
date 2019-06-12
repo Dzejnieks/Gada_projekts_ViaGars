@@ -1,0 +1,25 @@
+uuid: 4a141f92-1408-423f-8df6-11208cba9e3a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:footer:300e3017-b00c-4fb4-881e-ce2bf9b3f1cb'
+  module:
+    - block_content
+  theme:
+    - viagars
+id: footer
+theme: viagars
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:300e3017-b00c-4fb4-881e-ce2bf9b3f1cb'
+settings:
+  id: 'block_content:300e3017-b00c-4fb4-881e-ce2bf9b3f1cb'
+  label: footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
