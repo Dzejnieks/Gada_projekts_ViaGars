@@ -1,0 +1,61 @@
+
+//titulbilde
+.field--name-field-header{
+    .field__label{
+        display:none;
+    }
+    .field__item{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        img{
+            height: 600px;
+        }
+    }
+}
+//gallery images
+.node--type-gallery{
+    .node__meta{
+        .node__submitted{
+            display:none;
+        }
+    }
+    .node__content{
+        > div{ //container
+            .field--type-text-with-summary{
+                text-align: center;
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+.field--name-field-image{
+    .field__label{
+        display:none;
+    }
+    .field__items{
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        .field__item{
+            img{
+                height:100px;
+                width:100px;
+                padding: 10px 0;
+                @include media(xsmall){
+                    height: 150px;
+                    width: 150px;
+                }
+                @include media(small){
+                    height:200px;
+                    width:200px;
+                }
+                @include media (medium){
+                    height:300px;
+                    width:300px;
+                }
+            }
+        }
+    }
+}
