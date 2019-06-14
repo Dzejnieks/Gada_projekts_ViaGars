@@ -1,6 +1,6 @@
 uuid: 47ae423c-6f92-4435-9b6d-b1208a8436e7
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.menu-biedri

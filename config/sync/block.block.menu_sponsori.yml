@@ -1,6 +1,6 @@
 uuid: ce36c4ab-e7c5-4393-8df1-d491fa68fa4c
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.menu-sponsori

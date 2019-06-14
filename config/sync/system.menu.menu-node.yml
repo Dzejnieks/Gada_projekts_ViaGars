@@ -1,0 +1,8 @@
+uuid: ebfcc150-251c-4755-98c1-2b578956f616
+langcode: en
+status: true
+dependencies: {  }
+id: menu-node
+label: menu_node
+description: 'menu node'
+locked: false

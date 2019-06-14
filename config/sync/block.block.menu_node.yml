@@ -1,29 +1,29 @@
-uuid: e3a156eb-dc97-42f2-a435-81050eecd939
+uuid: 7a71b831-136f-49c6-b6c1-ad0bedb98cb7
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - system.menu.menu-raksti
+    - system.menu.menu-node
   module:
     - system
   theme:
     - viagars
-id: menu_raksti
+id: menu_node
 theme: viagars
 region: header
 weight: 0
 provider: null
-plugin: 'system_menu_block:menu-raksti'
+plugin: 'system_menu_block:menu-node'
 settings:
-  id: 'system_menu_block:menu-raksti'
-  label: menu_raksti
+  id: 'system_menu_block:menu-node'
+  label: menu_node
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
+  depth: 0
 visibility:
   request_path:
     id: request_path
-    pages: /raksti
-    negate: false
+    pages: /
+    negate: true
     context_mapping: {  }
