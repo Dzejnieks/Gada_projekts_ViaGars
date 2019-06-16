@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
+    - field.storage.node.field_date
     - node.type.event
   module:
+    - datetime
     - node
     - text
     - user
@@ -64,6 +66,184 @@ display:
           separator: ''
           hide_empty: false
       fields:
+        field_date:
+          id: field_date
+          table: node__field_date
+          field: field_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% set foo = [\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"Mai\", \"Jūn\", \"Jūl\", \"Aug\", \"Sep\", \"Okt\", \"Nov\", \"Dec\"] %}\r\n\r\n\r\n<div class=\"event-date\">\r\n  {{ field_date__value|date(\"d\") }}\r\n  <span>{{foo[field_date__value|date(\"m\")|number_format]}} {{ field_date__value|date(\"Y\") }}</span>\r\n</div>\r\n"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_plain
+          settings:
+            timezone_override: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: 'Lasīt vairāk'
+          output_url_as_text: false
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
+        body:
+          id: body
+          table: node__body
+          field: body
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: "<div class=\"event-info-wrapper\">\r\n<h2>{{ title }}</h2>\r\n\r\n{{ body }}\r\n<div class=\"node_link\">{{ view_node }}<div> \r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 200
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: true
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -72,7 +252,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -129,8 +309,8 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        body:
-          id: body
+        body_1:
+          id: body_1
           table: node__body
           field: body
           relationship: none
@@ -139,8 +319,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"event-info-wrapper\">\r\n<h2>{{ title }}</h2>\r\n\r\n{{ body }}\r\n<div class=\"node_link\">{{ view_node }}</div> \r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -178,9 +358,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_trimmed
-          settings:
-            trim_length: 300
+          type: text_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -192,59 +371,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        view_node:
-          id: view_node
-          table: node
-          field: view_node
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: 'Lasīt vairāk'
-          output_url_as_text: false
-          absolute: false
-          entity_type: node
-          plugin_id: entity_link
       filters:
         status:
           value: '1'
@@ -298,6 +424,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_date'
   block_1:
     display_plugin: block
     id: block_1
@@ -314,3 +441,4 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_date'

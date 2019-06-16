@@ -1,0 +1,10 @@
+uuid: 1f1a0924-23ad-4fd0-b2ba-f244e118ad8f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.basic_page
+label: Basic_page
+targetEntityType: node
+cache: true
