@@ -1,4 +1,18 @@
+.footer__inner{
+    >div{ //block content
+        .field--name-field-column{
+            .field__label{ 
+                display: none;
+            }
+        }
+    }
+}
+.footer_background{
+    background-color: $c-gray--element;
+
+}
 .field--name-field-column{
+    color:color(white);
     .field__items{
     justify-content: space-between;
     display: flex;

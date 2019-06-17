@@ -1,6 +1,6 @@
 uuid: 3487f41d-249d-4bd8-b48f-7fdb7271176a
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.menu-galerijas

@@ -439,22 +439,22 @@ div#block-viagars-branding{
     margin-top:2px;
     margin-right:15px; }
 
-.menu--menu-galerijas{
+.menu--menu-node{
   display:none; }
   @media screen and (min-width: 900px){
-    .menu--menu-galerijas{
+    .menu--menu-node{
       display:block; } }
-  .menu--menu-galerijas.open{
+  .menu--menu-node.open{
     display:block; }
-  .menu--menu-galerijas .menu{
+  .menu--menu-node .menu{
     margin:0; }
     @media screen and (min-width: 900px){
-      .menu--menu-galerijas .menu{
+      .menu--menu-node .menu{
         display:-ms-flexbox;
         display:flex; } }
-    .menu--menu-galerijas .menu li{
+    .menu--menu-node .menu li{
       text-align:center; }
-      .menu--menu-galerijas .menu li > a{
+      .menu--menu-node .menu li > a{
         position:relative;
         font-size:1.8rem;
         line-height:0.9;
@@ -471,7 +471,7 @@ div#block-viagars-branding{
         user-select:none;
         -webkit-tap-highlight-color:rgba(255, 255, 255, 0);
         cursor:pointer; }
-        .menu--menu-galerijas .menu li > a:after{
+        .menu--menu-node .menu li > a:after{
           position:absolute;
           top:100%;
           left:0;
@@ -482,55 +482,7 @@ div#block-viagars-branding{
           opacity:0;
           transition:height 0.3s, opacity 0.3s, transform 0.3s;
           transform:translateY(-10px); }
-        .menu--menu-galerijas .menu li > a:hover::after, .menu--menu-galerijas .menu li > a:focus::after{
-          height:3px;
-          opacity:1;
-          transform:translateY(0px); }
-
-.menu--menu-biedri{
-  display:none; }
-  @media screen and (min-width: 900px){
-    .menu--menu-biedri{
-      display:block; } }
-  .menu--menu-biedri.open{
-    display:block; }
-  .menu--menu-biedri .menu{
-    margin:0; }
-    @media screen and (min-width: 900px){
-      .menu--menu-biedri .menu{
-        display:-ms-flexbox;
-        display:flex; } }
-    .menu--menu-biedri .menu li{
-      text-align:center; }
-      .menu--menu-biedri .menu li > a{
-        position:relative;
-        font-size:1.8rem;
-        line-height:0.9;
-        padding-bottom:10px;
-        margin:1rem;
-        color:black;
-        text-decoration:none;
-        text-transform:uppercase;
-        letter-spacing:.17rem;
-        outline:0;
-        -webkit-user-select:none;
-        -moz-user-select:none;
-        -ms-user-select:none;
-        user-select:none;
-        -webkit-tap-highlight-color:rgba(255, 255, 255, 0);
-        cursor:pointer; }
-        .menu--menu-biedri .menu li > a:after{
-          position:absolute;
-          top:100%;
-          left:0;
-          width:100%;
-          height:1px;
-          background:black;
-          content:'';
-          opacity:0;
-          transition:height 0.3s, opacity 0.3s, transform 0.3s;
-          transform:translateY(-10px); }
-        .menu--menu-biedri .menu li > a:hover::after, .menu--menu-biedri .menu li > a:focus::after{
+        .menu--menu-node .menu li > a:hover::after, .menu--menu-node .menu li > a:focus::after{
           height:3px;
           opacity:1;
           transform:translateY(0px); }
@@ -555,106 +507,62 @@ div#block-viagars-branding{
     margin-top:2px;
     margin-right:15px; }
 
-.menu--menu-raksti{
+.footer__inner > div .field--name-field-column .field__label{
   display:none; }
-  @media screen and (min-width: 900px){
-    .menu--menu-raksti{
-      display:block; } }
-  .menu--menu-raksti.open{
-    display:block; }
-  .menu--menu-raksti .menu{
-    margin:0; }
-    @media screen and (min-width: 900px){
-      .menu--menu-raksti .menu{
-        display:-ms-flexbox;
-        display:flex; } }
-    .menu--menu-raksti .menu li{
-      text-align:center; }
-      .menu--menu-raksti .menu li > a{
-        position:relative;
-        font-size:1.8rem;
-        line-height:0.9;
-        padding-bottom:10px;
-        margin:1rem;
-        color:black;
-        text-decoration:none;
-        text-transform:uppercase;
-        letter-spacing:.17rem;
-        outline:0;
-        -webkit-user-select:none;
-        -moz-user-select:none;
-        -ms-user-select:none;
-        user-select:none;
-        -webkit-tap-highlight-color:rgba(255, 255, 255, 0);
-        cursor:pointer; }
-        .menu--menu-raksti .menu li > a:after{
-          position:absolute;
-          top:100%;
-          left:0;
-          width:100%;
-          height:1px;
-          background:black;
-          content:'';
-          opacity:0;
-          transition:height 0.3s, opacity 0.3s, transform 0.3s;
-          transform:translateY(-10px); }
-        .menu--menu-raksti .menu li > a:hover::after, .menu--menu-raksti .menu li > a:focus::after{
-          height:3px;
-          opacity:1;
-          transform:translateY(0px); }
 
-.menu--menu-galerijas{
+.footer_background{
+  background-color:#707070; }
+
+.field--name-field-column{
+  color:#fff; }
+  .field--name-field-column .field__items{
+    -ms-flex-pack:justify;
+        justify-content:space-between;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap; }
+
+.field--name-field-header .field__label{
   display:none; }
-  @media screen and (min-width: 900px){
-    .menu--menu-galerijas{
-      display:block; } }
-  .menu--menu-galerijas.open{
-    display:block; }
-  .menu--menu-galerijas .menu{
-    margin:0; }
-    @media screen and (min-width: 900px){
-      .menu--menu-galerijas .menu{
-        display:-ms-flexbox;
-        display:flex; } }
-    .menu--menu-galerijas .menu li{
-      text-align:center; }
-      .menu--menu-galerijas .menu li > a{
-        position:relative;
-        font-size:1.8rem;
-        line-height:0.9;
-        padding-bottom:10px;
-        margin:1rem;
-        color:black;
-        text-decoration:none;
-        text-transform:uppercase;
-        letter-spacing:.17rem;
-        outline:0;
-        -webkit-user-select:none;
-        -moz-user-select:none;
-        -ms-user-select:none;
-        user-select:none;
-        -webkit-tap-highlight-color:rgba(255, 255, 255, 0);
-        cursor:pointer; }
-        .menu--menu-galerijas .menu li > a:after{
-          position:absolute;
-          top:100%;
-          left:0;
-          width:100%;
-          height:1px;
-          background:black;
-          content:'';
-          opacity:0;
-          transition:height 0.3s, opacity 0.3s, transform 0.3s;
-          transform:translateY(-10px); }
-        .menu--menu-galerijas .menu li > a:hover::after, .menu--menu-galerijas .menu li > a:focus::after{
-          height:3px;
-          opacity:1;
-          transform:translateY(0px); }
 
-.field--name-field-column .field__items{
+.field--name-field-header .field__item{
+  margin-left:auto;
+  margin-right:auto;
+  width:100%; }
+  .field--name-field-header .field__item img{
+    height:600px; }
+
+.node--type-gallery .node__meta .node__submitted{
+  display:none; }
+
+.node--type-gallery .node__content > div .field--type-text-with-summary{
+  text-align:center;
+  font-size:4rem; }
+
+.field--name-field-image .field__label{
+  display:none; }
+
+.field--name-field-image .field__items{
   -ms-flex-pack:justify;
       justify-content:space-between;
   display:-ms-flexbox;
   display:flex;
   -ms-flex-wrap:wrap;
       flex-wrap:wrap; }
+  .field--name-field-image .field__items .field__item img{
+    height:100px;
+    width:100px;
+    padding:10px 0; }
+    @media screen and (min-width: 540px){
+      .field--name-field-image .field__items .field__item img{
+        height:150px;
+        width:150px; } }
+    @media screen and (min-width: 900px){
+      .field--name-field-image .field__items .field__item img{
+        height:200px;
+        width:200px; } }
+    @media screen and (min-width: 1080px){
+      .field--name-field-image .field__items .field__item img{
+        height:300px;
+        width:300px; } }
