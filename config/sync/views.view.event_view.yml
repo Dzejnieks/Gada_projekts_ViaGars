@@ -66,6 +66,70 @@ display:
           separator: ''
           hide_empty: false
       fields:
+        field_date_1:
+          id: field_date_1
+          table: node__field_date
+          field: field_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: ' <div class="event-time">{{ field_date_1__value|date("H:i") }}</div>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: medium
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_date:
           id: field_date
           table: node__field_date
@@ -74,7 +138,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
             text: "{% set foo = [\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"Mai\", \"Jūn\", \"Jūl\", \"Aug\", \"Sep\", \"Okt\", \"Nov\", \"Dec\"] %}\r\n\r\n\r\n<div class=\"event-date\">\r\n  {{ field_date__value|date(\"d\") }}\r\n  <span>{{foo[field_date__value|date(\"m\")|number_format]}} {{ field_date__value|date(\"Y\") }}</span>\r\n</div>\r\n"
@@ -178,7 +242,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           text: 'Lasīt vairāk'
-          output_url_as_text: false
+          output_url_as_text: true
           absolute: false
           entity_type: node
           plugin_id: entity_link
@@ -208,7 +272,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 200
+            max_length: 150
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -320,7 +384,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"event-info-wrapper\">\r\n<h2>{{ title }}</h2>\r\n\r\n{{ body }}\r\n<div class=\"node_link\">{{ view_node }}</div> \r\n</div>"
+            text: "<a href=\"{{ view_node }}\" class=\"event-card-link\">\r\n{{ field_date }}\r\n<div class=\"event-teaser-card\">\r\n<div class=\"event-info-wrapper\">\r\n{{ field_date_1 }}\r\n<h2>{{ title }}</h2>\r\n{{ body }} \r\n</div>\r\n</div>\r\n</a>\r\n"
             make_link: false
             path: ''
             absolute: false
