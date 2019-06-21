@@ -6,10 +6,12 @@ dependencies:
     - field.field.node.event.body
     - field.field.node.event.field_date
     - field.field.node.event.field_header_image
+    - field.field.node.event.field_main_image_type
     - node.type.event
   module:
     - datetime
     - image
+    - options
     - text
     - user
 id: node.event.default
@@ -26,21 +28,27 @@ content:
     region: content
   field_date:
     weight: 2
-    label: above
+    label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: short
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_header_image:
     weight: 0
-    label: above
+    label: hidden
     settings:
       image_style: ''
-      image_link: ''
     third_party_settings: {  }
-    type: image
+    type: image_url
+    region: content
+  field_main_image_type:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
     region: content
   links:
     weight: 3
