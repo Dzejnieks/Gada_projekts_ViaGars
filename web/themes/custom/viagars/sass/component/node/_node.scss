@@ -1,3 +1,51 @@
 @import "users_view";
 @import "sponsors_view";
 @import "event_view";
+
+.hero_header {
+  min-height: 320px;
+  position: relative;
+  background-color: #444;
+  background-size: cover;
+  overflow: auto;
+  color: white;
+  @include media (medium) {
+    margin: 0 0 0 60px;
+  }
+  .hero_content {
+    display: flex;
+    align-items: flex-end;
+    max-width: $max-width;
+    min-height: 320px;
+    padding: 5em 7vw 2em;
+    background-color: rgba(0, 0, 0, 0.439);
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      font-weight: 100;
+      margin-bottom: 0;
+      background: #3a9848;
+      padding: 1rem 3rem;
+      line-height: 1.2;
+      @include media (small) {
+        font-size: 5rem;
+        padding: 1rem 4rem;
+      }
+      @include media (medium) {
+        font-size: 7rem;
+        padding: 1rem 5rem;
+      }
+    }
+    .field--name-field-date {
+      font-weight: 500;
+      font-size: 2rem;
+    }
+  }
+}
+
+.node-content {
+  max-width: 770px;
+  margin: 50px auto 40px;
+  padding: 0 15px;
+}

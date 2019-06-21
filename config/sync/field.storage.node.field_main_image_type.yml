@@ -1,0 +1,33 @@
+uuid: 863c76eb-71ff-476f-a64b-5120508b61dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_main_image_type
+field_name: field_main_image_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: main
+      label: Default
+    -
+      value: box
+      label: Box
+    -
+      value: trip
+      label: Trip
+    -
+      value: key
+      label: Label
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
