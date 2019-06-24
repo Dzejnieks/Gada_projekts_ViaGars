@@ -4,9 +4,20 @@
         flex-wrap: wrap;
         position: relative;
         text-align: center;
-        .views-field{
+        .views-field{ //viens entry
             width: 33.33%;
             height: 50%;
+            img{
+                opacity: 1;
+                transition: .5s ease;
+                backface-visibility: hidden
+            }
+            &:hover {
+                img{
+                    opacity:0.3;
+                }
+        }
+
         }
         .views-field-view-node{
             padding-bottom:30px;

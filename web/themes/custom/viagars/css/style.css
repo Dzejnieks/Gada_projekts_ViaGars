@@ -200,6 +200,9 @@ div#block-viagars-branding{
     div#block-viagars-branding{
       display:block; } }
 
+.messages--error{
+  display:none; }
+
 .paragraph--type--header-block{
   display:-ms-flexbox;
   display:flex;
@@ -266,6 +269,13 @@ div#block-viagars-branding{
   .view-gallery-view > div .views-field{
     width:33.33%;
     height:50%; }
+    .view-gallery-view > div .views-field img{
+      opacity:1;
+      transition:.5s ease;
+      -webkit-backface-visibility:hidden;
+              backface-visibility:hidden; }
+    .view-gallery-view > div .views-field:hover img{
+      opacity:0.3; }
   .view-gallery-view > div .views-field-view-node{
     padding-bottom:30px;
     margin-top:-30px; }
@@ -281,17 +291,26 @@ div#block-viagars-branding{
     width:33%;
     height:50%; }
 
-.view-full-gallery-view > div{
+.view-galerijas-skats-fixed > div{
   display:-ms-flexbox;
   display:flex;
   -ms-flex-wrap:wrap;
       flex-wrap:wrap;
   position:relative;
   text-align:center; }
-  .view-full-gallery-view > div > div{
-    padding:10px 10px;
-    width:33%;
+  .view-galerijas-skats-fixed > div .views-field{
+    width:33.33%;
     height:50%; }
+    .view-galerijas-skats-fixed > div .views-field img{
+      opacity:1;
+      transition:.5s ease;
+      -webkit-backface-visibility:hidden;
+              backface-visibility:hidden; }
+    .view-galerijas-skats-fixed > div .views-field:hover img{
+      opacity:0.3; }
+  .view-galerijas-skats-fixed > div .views-field-view-node{
+    padding-bottom:30px;
+    margin-top:-30px; }
 
 .view-full-sponsors-view > div{
   display:-ms-flexbox;
@@ -303,6 +322,27 @@ div#block-viagars-branding{
     text-align:center;
     width:33%;
     height:50%; }
+
+.view-full-gallery-view > div{
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-wrap:wrap;
+      flex-wrap:wrap;
+  position:relative;
+  text-align:center; }
+  .view-full-gallery-view > div .views-field{
+    width:33.33%;
+    height:50%; }
+    .view-full-gallery-view > div .views-field img{
+      opacity:1;
+      transition:.5s ease;
+      -webkit-backface-visibility:hidden;
+              backface-visibility:hidden; }
+    .view-full-gallery-view > div .views-field:hover img{
+      opacity:0.3; }
+  .view-full-gallery-view > div .views-field-view-node{
+    padding-bottom:30px;
+    margin-top:-30px; }
 
 .view-user-view > div{
   display:-ms-flexbox;
@@ -591,6 +631,7 @@ div#block-viagars-branding{
   background-color:#707070; }
 
 .field--name-field-column{
+  padding:20px 0 0 0;
   color:#fff; }
   .field--name-field-column .field__items{
     -ms-flex-pack:justify;
@@ -599,6 +640,9 @@ div#block-viagars-branding{
     display:flex;
     -ms-flex-wrap:wrap;
         flex-wrap:wrap; }
+    .field--name-field-column .field__items .field__item img{
+      max-width:50px;
+      max-height:50px; }
 
 .field--name-field-header .field__label{
   display:none; }
