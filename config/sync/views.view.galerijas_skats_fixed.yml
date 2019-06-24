@@ -1,4 +1,4 @@
-uuid: 0429c45f-89ea-4431-b2ba-8f6f3419b47a
+uuid: ba16de73-f045-41a5-89f9-cfb1598dd1b8
 langcode: en
 status: true
 dependencies:
@@ -10,8 +10,8 @@ dependencies:
     - image
     - node
     - user
-id: gallery_view
-label: 'Galerijas skats'
+id: galerijas_skats_fixed
+label: 'Galerijas skats_fixed'
 module: views
 description: ''
 tag: ''
