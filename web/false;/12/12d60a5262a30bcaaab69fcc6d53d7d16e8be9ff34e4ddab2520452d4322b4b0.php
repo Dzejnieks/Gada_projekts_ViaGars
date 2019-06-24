@@ -81,7 +81,7 @@ class __TwigTemplate_880b48b7b4840737d03a2785ef66bc6f4e9a9bd99d3a7e49b1b95550fe2
             // line 55
             echo "      style=\"background-image: url(";
             echo $this->env->getExtension('Drupal\Core\Template\TwigExtension')->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed($this->getAttribute($this->getAttribute($this->getAttribute(($context["content"] ?? null), "field_background_image", []), 0, [], "array"), "#markup", [], "array")), "html", null, true);
-            echo ")\"
+            echo ");\"
     ";
         }
         // line 57
@@ -191,7 +191,7 @@ class __TwigTemplate_880b48b7b4840737d03a2785ef66bc6f4e9a9bd99d3a7e49b1b95550fe2
     id=\"{{ content.field_anchor[0][\"#context\"][\"value\"] }}\"
     {{ attributes.addClass(classes) }}
     {% if content.field_background_image[0]['#markup'] %}
-      style=\"background-image: url({{content.field_background_image[0]['#markup']}})\"
+      style=\"background-image: url({{content.field_background_image[0]['#markup']}});\"
     {% endif %}
     >
     {% block content %}

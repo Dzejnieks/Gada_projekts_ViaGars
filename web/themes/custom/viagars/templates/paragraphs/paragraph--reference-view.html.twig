@@ -52,7 +52,7 @@
     id="{{ content.field_anchor[0]["#context"]["value"] }}"
     {{ attributes.addClass(classes) }}
     {% if content.field_background_image[0]['#markup'] %}
-      style="background-image: url({{content.field_background_image[0]['#markup']}})"
+      style="background-image: url({{content.field_background_image[0]['#markup']}});"
     {% endif %}
     >
     {% block content %}

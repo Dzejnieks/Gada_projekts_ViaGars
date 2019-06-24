@@ -259,26 +259,36 @@ div#block-viagars-branding{
     position:relative;
     text-align:center; }
 
-.view-gallery-view > div{
-  display:-ms-flexbox;
-  display:flex;
-  -ms-flex-wrap:wrap;
-      flex-wrap:wrap;
-  position:relative;
-  text-align:center; }
-  .view-gallery-view > div .views-field{
-    width:33.33%;
-    height:50%; }
-    .view-gallery-view > div .views-field img{
-      opacity:1;
-      transition:.5s ease;
-      -webkit-backface-visibility:hidden;
-              backface-visibility:hidden; }
-    .view-gallery-view > div .views-field:hover img{
-      opacity:0.3; }
-  .view-gallery-view > div .views-field-view-node{
-    padding-bottom:30px;
-    margin-top:-30px; }
+.view-gallery-view{
+  background:rgba(12, 12, 12, .4); }
+  .view-gallery-view > div{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+    position:relative;
+    text-align:center; }
+    .view-gallery-view > div .views-field{
+      width:33.33%;
+      height:50%;
+      padding:1px 5px 1px 5px;
+      line-height:20px; }
+      .view-gallery-view > div .views-field img{
+        opacity:1;
+        transition:.5s ease;
+        -webkit-backface-visibility:hidden;
+                backface-visibility:hidden; }
+      .view-gallery-view > div .views-field:hover img{
+        opacity:0.3; }
+    .view-gallery-view > div .views-field-view-node{
+      padding-bottom:30px;
+      margin-top:-30px; }
+
+#Galerija{
+  color:white;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center; }
 
 .view-full-users-view > div{
   display:-ms-flexbox;
@@ -291,6 +301,23 @@ div#block-viagars-branding{
     width:33%;
     height:50%; }
 
+.view-full-users-view img{
+  height:100px;
+  width:100px;
+  padding:20px 0 0 0; }
+  @media screen and (min-width: 540px){
+    .view-full-users-view img{
+      height:100px;
+      width:100px; } }
+  @media screen and (min-width: 900px){
+    .view-full-users-view img{
+      height:200px;
+      width:200px; } }
+  @media screen and (min-width: 1080px){
+    .view-full-users-view img{
+      height:300px;
+      width:300px; } }
+
 .view-galerijas-skats-fixed > div{
   display:-ms-flexbox;
   display:flex;
@@ -300,7 +327,8 @@ div#block-viagars-branding{
   text-align:center; }
   .view-galerijas-skats-fixed > div .views-field{
     width:33.33%;
-    height:50%; }
+    height:50%;
+    padding:1px 5px 1px 5px; }
     .view-galerijas-skats-fixed > div .views-field img{
       opacity:1;
       transition:.5s ease;
@@ -322,6 +350,23 @@ div#block-viagars-branding{
     text-align:center;
     width:33%;
     height:50%; }
+
+.view-full-sponsors-view img{
+  height:100px;
+  width:100px;
+  padding:20px 0 0 0; }
+  @media screen and (min-width: 540px){
+    .view-full-sponsors-view img{
+      height:100px;
+      width:100px; } }
+  @media screen and (min-width: 900px){
+    .view-full-sponsors-view img{
+      height:200px;
+      width:200px; } }
+  @media screen and (min-width: 1080px){
+    .view-full-sponsors-view img{
+      height:300px;
+      width:300px; } }
 
 .view-full-gallery-view > div{
   display:-ms-flexbox;
@@ -356,33 +401,60 @@ div#block-viagars-branding{
     height:50%;
     padding:10px; }
 
-.user_content img{
+.view-user-view img{
   height:100px;
   width:100px;
-  padding:10px 0; }
+  padding:20px 0 0 0; }
   @media screen and (min-width: 540px){
-    .user_content img{
-      height:150px;
-      width:150px; } }
+    .view-user-view img{
+      height:100px;
+      width:100px; } }
   @media screen and (min-width: 900px){
-    .user_content img{
+    .view-user-view img{
       height:200px;
       width:200px; } }
   @media screen and (min-width: 1080px){
-    .user_content img{
+    .view-user-view img{
       height:300px;
       width:300px; } }
 
-.view-sponsors-view > div{
-  display:-ms-flexbox;
-  display:flex;
-  -ms-flex-wrap:wrap;
-      flex-wrap:wrap;
-  position:relative;
-  text-align:center; }
-  .view-sponsors-view > div .views-row{
-    width:33.3%;
-    height:50%; }
+.view-sponsors-view{
+  background:rgba(12, 12, 12, .4); }
+  .view-sponsors-view > div{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+    position:relative;
+    text-align:center; }
+    .view-sponsors-view > div .views-row{
+      width:33.3%;
+      height:50%; }
+      .view-sponsors-view > div .views-row .views-field-title-1{
+        padding:20px; }
+  .view-sponsors-view img{
+    height:100px;
+    width:100px;
+    padding:20px 0 0 0; }
+    @media screen and (min-width: 540px){
+      .view-sponsors-view img{
+        height:100px;
+        width:100px; } }
+    @media screen and (min-width: 900px){
+      .view-sponsors-view img{
+        height:200px;
+        width:200px; } }
+    @media screen and (min-width: 1080px){
+      .view-sponsors-view img{
+        height:300px;
+        width:300px; } }
+
+#Sponsori{
+  color:white;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  font-size:40px; }
 
 .event-teaser-card{
   position:relative;
@@ -652,7 +724,7 @@ div#block-viagars-branding{
   margin-right:auto;
   width:100%; }
   .field--name-field-header .field__item img{
-    height:600px; }
+    height:auto; }
 
 .node--type-gallery .node__meta .node__submitted{
   display:none; }
@@ -677,13 +749,13 @@ div#block-viagars-branding{
     padding:10px 0; }
     @media screen and (min-width: 540px){
       .field--name-field-image .field__items .field__item img{
-        height:150px;
-        width:150px; } }
+        height:66px;
+        width:100px; } }
     @media screen and (min-width: 900px){
       .field--name-field-image .field__items .field__item img{
-        height:200px;
+        height:133px;
         width:200px; } }
     @media screen and (min-width: 1080px){
       .field--name-field-image .field__items .field__item img{
-        height:300px;
+        height:200px;
         width:300px; } }

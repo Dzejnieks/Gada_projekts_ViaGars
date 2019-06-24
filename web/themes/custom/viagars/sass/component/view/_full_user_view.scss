@@ -9,4 +9,21 @@
             height: 50%;
             }
         }
+        img{
+            height:100px;
+            width:100px;
+            padding: 20px 0 0 0;
+            @include media(xsmall){
+                height: 100px;
+                width: 100px;
+            }
+            @include media(small){
+                height:200px;
+                width:200px;
+            }
+            @include media (medium){
+                height:300px;
+                width:300px;
+            }
+        }
 }
