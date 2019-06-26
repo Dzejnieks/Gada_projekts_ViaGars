@@ -7,10 +7,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   min-height: 100vh;
   position: relative;
   text-align: center;
-  background-attachment: inherit;
 
   .field--name-field-header-text {
     max-width: 600px;
@@ -20,12 +20,21 @@
     background: rgba(12, 12, 12, 0.4);
     h1 {
       font-size: 8rem;
+      background-color: #111;
+      color: #fff;
+      padding: 30px 60px;
+      letter-spacing: 10px;
+      margin: 0;
     }
     p {
       font-size: 2rem;
     }
   }
-
+}
+.background-image {
+  .field--name-field-button > a {
+    background: white;
+  }
 }
 .field--name-field-button {
   > a {
@@ -40,11 +49,11 @@
     -moz-transition: .3s;
     -o-transition: .3s;
     display: inline-block;
-    color: color(orange);
-    border: 2px color(orange) solid;
-    &:hover{
+    color: color(primary, base);
+    border: 2px color(primary, base) solid;
+    &:hover {
       color: #fff;
-      background-color: color(orange);
+      background-color: color(primary, base);
     }
   }
 }

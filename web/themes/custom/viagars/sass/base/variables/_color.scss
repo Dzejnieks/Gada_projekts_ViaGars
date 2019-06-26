@@ -22,7 +22,6 @@ $c-warning: orange;
 $c-error: red;
 
 $colors: (
-  // color palette
   black: #000,
   white: #fff,
   gray: #666,
@@ -42,33 +41,29 @@ $colors: (
   shamrock-green: $c-study,
   pale-purple: $c-research,
   gray-darkest: #102027,
-  // defaults
   text: white,
   background: gray,
-  // nested map inception
-  primary: (
-    base: $c-purple--base,
-    light: $c-purple--light,
-    lighter: $c-purple--lighter,
-  ),
-  secondary: (
-    base: #1f033a,
-    light: lighten(#1f033a, 15%),
-    dark: darken(#1f033a, 15%),
-    trans: transparentize(#1f033a, 0.5)
-  ),
-  community: (
-    base-bg: #eaecf2,
-    base-fg: #2f2859,
-    primary-light-bg: #e1e5f4,
-    primary-light-fg: #2f2859,
-    primary-dark-bg: #2f2859,
-    primary-dark-fg: #fff,
-    secondary-light-bg: #fafafa,
-    secondary-light-fg: #2f2859,
-    secondary-dark-bg: #e8e0db,
-    secondary-dark-fg: #2f2859
-  )
+  primary: (base: #3a9848, light: $c-purple--light, lighter: $c-purple--lighter),
+  secondary:
+    (
+      base: #1f033a,
+      light: lighten(#1f033a, 15%),
+      dark: darken(#1f033a, 15%),
+      trans: transparentize(#1f033a, 0.5)
+    ),
+  community:
+    (
+      base-bg: #eaecf2,
+      base-fg: #2f2859,
+      primary-light-bg: #e1e5f4,
+      primary-light-fg: #2f2859,
+      primary-dark-bg: #2f2859,
+      primary-dark-fg: #fff,
+      secondary-light-bg: #fafafa,
+      secondary-light-fg: #2f2859,
+      secondary-dark-bg: #e8e0db,
+      secondary-dark-fg: #2f2859
+    )
 );
 
 $header-search-background: #102027;

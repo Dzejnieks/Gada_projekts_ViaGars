@@ -1,35 +1,40 @@
-.view-gallery-view{
-    background: rgba(12, 12, 12, 0.4);
-    > div {
-        display:flex;
-        flex-wrap: wrap;
-        position: relative;
-        text-align: center;
-        .views-field{ //viens entry
-            width: 33.33%;
-            height: 50%;
-            padding: 1px 5px 1px 5px;
-            line-height: 20px;
-            img{
-                opacity: 1;
-                transition: .5s ease;
-                backface-visibility: hidden
-            }
-            &:hover {
-                img{
-                    opacity:0.3;
-                }
-            }
+.view-gallery-view {
+  background: rgba(12, 12, 12, 0.4);
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    text-align: center;
+    .views-field {
+      //viens entry
+      width: 33.33%;
+      height: 50%;
+      padding: 1px 5px 1px 5px;
+      line-height: 20px;
+      img {
+        opacity: 1;
+        transition: .5s ease;
+        backface-visibility: hidden;
+      }
+      &:hover {
+        img {
+          opacity: 0.3;
         }
-        .views-field-view-node{
-            padding-bottom:30px;
-            margin-top:-30px;
-        }
+      }
     }
+    .views-field-view-node {
+      padding-bottom: 30px;
+      margin-top: -30px;
+    }
+  }
 }
-#Galerija{
-    color:white;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+#Galerija {
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
