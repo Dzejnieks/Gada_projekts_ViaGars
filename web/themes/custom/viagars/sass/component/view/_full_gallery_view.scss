@@ -1,13 +1,27 @@
-.view-full-gallery-view{
-    > div{
-            display: flex;
-            flex-wrap: wrap;
-            position: relative;
-            text-align: center;
-            >div{
-                padding: 10px 10px;
-                width: 33%;
-                height: 50%;
+.view-galerijas-skats-fixed{
+    > div {
+        display:flex;
+        flex-wrap: wrap;
+        position: relative;
+        text-align: center;
+        .views-field{ //viens entry
+            width: 33.33%;
+            height: 50%;
+            padding: 1px 5px 1px 5px;
+            img{
+                opacity: 1;
+                transition: .5s ease;
+                backface-visibility: hidden
+            }
+            &:hover {
+                img{
+                    opacity:0.3;
+                }
+            }
+        }
+        .views-field-view-node{
+            padding-bottom:30px;
+            margin-top:-30px;
         }
     }
 }

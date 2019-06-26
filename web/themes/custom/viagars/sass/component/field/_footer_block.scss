@@ -12,12 +12,17 @@
 
 }
 .field--name-field-column{
+    padding: 20px 0 0 0;
     color:color(white);
     .field__items{
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
     .field__item{
+        img{
+            max-width: 50px;
+            max-height: 50px;
+        }
         
     }
     }
