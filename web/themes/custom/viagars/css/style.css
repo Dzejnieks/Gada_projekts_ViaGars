@@ -214,10 +214,10 @@ div#block-viagars-branding{
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
+  background-attachment:fixed;
   min-height:100vh;
   position:relative;
-  text-align:center;
-  background-attachment:inherit; }
+  text-align:center; }
   .paragraph--type--header-block .field--name-field-header-text{
     max-width:600px;
     margin:auto;
@@ -225,9 +225,17 @@ div#block-viagars-branding{
     padding:1rem;
     background:rgba(12, 12, 12, .4); }
     .paragraph--type--header-block .field--name-field-header-text h1{
-      font-size:8rem; }
+      font-size:8rem;
+      background-color:#111;
+      color:#fff;
+      padding:30px 60px;
+      letter-spacing:10px;
+      margin:0; }
     .paragraph--type--header-block .field--name-field-header-text p{
       font-size:2rem; }
+
+.background-image .field--name-field-button > a{
+  background:white; }
 
 .field--name-field-button > a{
   cursor:pointer;
@@ -241,20 +249,25 @@ div#block-viagars-branding{
   -moz-transition:.3s;
   -o-transition:.3s;
   display:inline-block;
-  color:#ff7c7c;
-  border:2px #ff7c7c solid; }
+  color:#3a9848;
+  border:2px #3a9848 solid; }
   .field--name-field-button > a:hover{
     color:#fff;
-    background-color:#ff7c7c; }
+    background-color:#3a9848; }
 
 .field__items .field__item .paragraph--type--reference-view{
   position:relative;
   padding-top:30px; }
   .field__items .field__item .paragraph--type--reference-view .field--name-field-title{
-    font-size:35px;
-    padding:0px 10px 20px 10px; }
+    font-size:40px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:300;
+    padding:30px 10px 30px 10px;
+    text-decoration:underline; }
   .field__items .field__item .paragraph--type--reference-view .field--name-field-button{
-    text-align:center; }
+    text-align:center;
+    padding:20px 10px 60px 10px; }
   .field__items .field__item .paragraph--type--reference-view .field--name-field-title{
     position:relative;
     text-align:center; }
@@ -288,7 +301,11 @@ div#block-viagars-branding{
   color:white;
   background-repeat:no-repeat;
   background-size:cover;
-  background-position:center; }
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed; }
 
 .view-full-users-view > div{
   display:-ms-flexbox;
@@ -454,7 +471,8 @@ div#block-viagars-branding{
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
-  font-size:40px; }
+  font-size:40px;
+  background-attachment:fixed; }
 
 .event-teaser-card{
   position:relative;
